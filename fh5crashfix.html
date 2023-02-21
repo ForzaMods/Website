@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FH5 CrashFix Tutorial</title>
+    <link rel="stylesheet" href="fonts/css/all.css">
+    <script src="fonts/js/all.js"></script>
+    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<style>
+        .choice {
+          display: inline-block;
+          padding: 10px 20px;
+          margin: 10px;
+          background-color: #0074d9;
+          color :white;
+          border: 2px solid #0074d9;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        .choices {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Open Sans', sans-serif;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.question {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+		}
+		.button {
+			display: block;
+			margin: 0 auto;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+
+		.button:hover {
+			background-color: #444;
+		}
+
+		.footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.footer a {
+			color: #fff;
+			margin: 0 10px;
+		}
+.fa-discord {
+  color: #fff;
+}
+
+.fa-mug-hot {
+  color: #fff;
+}
+
+.fa-paypal {
+  color: #fff;
+}
+.text {
+    text-align: center;
+    display: none;
+}
+.comeback-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0074d9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.steam-text {
+	font-family: 'Open Sans', sans-serif;
+}
+.ms-store-text {
+	font-family: 'Open Sans', sans-serif;
+}
+	</style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><button class="comeback-button">Home</button></a>
+      </header>
+	<div class="container">
+		<div class="question" id="question">Which platform do you use?</div>
+
+		<div class="choices">
+			<div class="choice" id="steam">Steam</div>
+			<div class="choice" id="ms-store">MS Store</div>
+		</div>
+	</div>
+    <div class="text" id="steam-text">
+        <p>- Open steam app,</p>
+        <p>- Right click on the game,</p>
+        <p>- Click "Properties",</p>
+        <p>- Now click on "Local files" then "Browse...",</p>
+        <p>- Find ForzaHorizon5.exe",</p>
+        <p>- Open AIO as admin,</p>
+        <p>- Launch the game in this folder (this is important),</p>
+        <p>- Wait until AIO injects</p>
+    </div>
+    
+    <div class="text" id="ms-store-text">
+        <p>- Go to your xbox app,</p>
+		<p>- Right click on the game,</p>
+		<p>- Click "Manage",</p>
+		<p>- Now click on "Files",</p>
+		<p>- Click "Browse...",</p>
+		<p>- Find ForzaHorizon5.exe" (in Xbox\Forza Horizon 5\Content),</p>
+		<p>- Open AIO as admin,</p>
+		<p>- Launch the game in this folder (this is important),</p>
+		<p>- Wait until AIO injects</p>
+    </div>
+<footer>
+    <div class="footer">
+        <div class="footer-icons">
+            <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+            <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+      </div>
+    </footer>
+	<script>
+		const question = document.getElementById("question");
+		const choices = document.querySelectorAll(".choice");
+		const submitButton = document.getElementById("submit-button");
+
+		for (let choice of choices) {
+			choice.addEventListener("click", () => {
+				question.style.display = "none";
+				for (let c of choices) {
+					if (c != choice) {
+						c.style.display = "none";
+					}
+				}
+				submitButton.style.display = "none";
+
+				localStorage.setItem("platform", choice.id);
+			});
+		}
+        const steamBtn = document.getElementById('steam');
+        const msStoreBtn = document.getElementById('ms-store');
+        const steamText = document.getElementById('steam-text');
+        const msStoreText = document.getElementById('ms-store-text');
+
+        steamBtn.addEventListener('click', function() {
+            steamText.style.display = 'block';
+        });
+
+        msStoreBtn.addEventListener('click', function() {
+            msStoreText.style.display = 'block';
+        });
+        	</script>
+</body>
+</html>

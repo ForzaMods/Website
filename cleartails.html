@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forza Mods FH5 Clear Tails</title>
+    <link rel="stylesheet" href="fonts/css/all.css">
+    <script src="fonts/js/all.js"></script>
+    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <style>
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0 -10px !important;
+  background-color: #333;
+}
+.footer a {
+			color: #fff;
+			margin: 0 10px;
+		}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: inline-block;
+}
+
+.footer-links i {
+  font-size: 24px;
+  color: #fff;
+  padding: 5px;
+  margin: 0 10px;
+}
+.footer-icons a {
+  margin: 0 10px !important;
+}
+.footer-links i:hover {
+  color: #bbb;
+  cursor: pointer;
+}
+.fa-discord {
+  color: #fff;
+}
+
+.fa-mug-hot {
+  color: #fff;
+}
+
+.fa-paypal {
+  color: #fff;
+}
+.comeback-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #0074d9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    </style>
+      <header>
+        <a href="models.html"><button class="comeback-button">Home</button></a>
+    </header>
+    <body>
+        <div style="font-family: 'Open Sans', sans-serif; text-align: center;">
+            <h1 style="font-weight: bold;">Trial Reset for 3DSimED3/010 Editor</h1>
+            <h3 style="font-weight: bold;">Names may differ for each car but layout is the same. This is using the names for the S13.</h3>
+            <p>1. Open glassLTL and glassRTL modelbins.</p>
+            <p>2. Within the first few lines you will see "border_red" "border_white" "glass_red" "glass_white" "border_amber" "glass_amber" or something similar.</p>
+            <p>3. Directly after the term there will be 00,01,02,03,etc</p>
+            <p>4. Now find the position string (starts with 80 3F, will be 30 long including 80 3F and 4 00's at minimum)</p>
+            <p>5. Shortly before or after you will see FF FF XX 00 FF FF FF or similar.</p>
+            <p>6. The XX will be 00,01,02,etc and you will need to change it to what is desired. </p>
+            <p>7. For example glass_white is 01, glass_red is 02, and glass_amber is 03. If i want all clear I will replace all FF FF 02 FF FF FF and FF FF 03 FF FF FF with FF FF 01 FF FF FF.</p>
+            <p>8. This will make all glass_red and glass_amber use the glass_white from the reverse lights.
+            </p>
+          </div>
+    </body>
+    <footer>
+        <div class="footer-icons">
+          <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+          <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+          <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+        </div>
+        </footer>
+</html>

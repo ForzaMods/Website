@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forza Mods Tutorials</title>
+    <link rel="stylesheet" href="fonts/css/all.css">
+    <script src="fonts/js/all.js"></script>
+    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 50px;
+}
+
+#filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#filter-buttons button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#filter-buttons button:hover {
+  background-color: #005ea2;
+}
+
+#tutorial-list {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+#tutorial-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+#tutorial-list li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+#tutorial-list li:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#tutorial-list a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.html {
+  border-color: #f39c12;
+}
+
+.css {
+  border-color: #9b59b6;
+}
+
+@media screen and (max-width: 768px) {
+  #filter-buttons {
+    flex-wrap: wrap;
+  }
+  
+  #filter-buttons button {
+    flex-grow: 1;
+    margin: 5px;
+  }
+  
+  #tutorial-list {
+    margin: 30px 10px;
+  }
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+}
+.footer a {
+			color: #fff;
+			margin: 0 10px;
+		}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: inline-block;
+}
+
+.footer-links i {
+  font-size: 24px;
+  color: #fff;
+  padding: 5px;
+  margin: 0 10px;
+}
+.footer-icons a {
+  margin: 0 10px !important;
+}
+.footer-links i:hover {
+  color: #bbb;
+  cursor: pointer;
+}
+.fa-discord {
+  color: #fff;
+}
+
+.fa-mug-hot {
+  color: #fff;
+}
+
+.fa-paypal {
+  color: #fff;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+.modreleases-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #0074d9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .savegames-button {
+      position: absolute;
+      top: 10px;
+      right: 145px;
+      background-color: #0074d9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .models-button {
+      position: absolute;
+      top: 10px;
+      right: 265px;
+      background-color: #0074d9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .about-button {
+      position: absolute;
+      top: 10px;
+      right: 405px;
+      background-color: #0074d9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <header>
+    <a href="modreleases.html"><button class="modreleases-button">Mod Releases</button></a>
+    <a href="savegames.html"><button class="savegames-button">Savegames</button></a>
+    <a href="models.html"><button class="models-button">Modelswapping</button></a>
+    <a href="about.html"><button class="about-button">About</button></a>
+</header>
+  <body>
+    
+    <div id="filter-buttons">
+      <button onclick="filterAll()">All</button>
+      <button onclick="filterFH5()">FH5</button>
+      <button onclick="filterFH4()">FH4</button>
+    </div>
+    
+    <div id="tutorial-list">
+      <ul>
+        <li class="FH5"><a href="fh5resetsave.html">FH5 Reset Save</a></li>
+        <li class="FH5"><a href="fh5aiocars.html">FH5 AIO Cars after update</a></li>
+        <li class="FH5"><a href="fh5crashfix.html">FH5 CrashFix</a></li>
+        <li class="FH5"><a href="fh5saveswapping.html">FH5 Saveswapping</a></li>
+        <li class="FH5"><a href="fh5resetrank.html">FH5 How to reset rank to level 1</a></li>
+        <li class="FH4"><a href="fh4saveswapping.html">FH4 Saveswapping</a></li>
+        <li class="FH4"><a href="fh4online.html">FH4 Play online (Steam) while banned on MS Store</a></li>
+      </ul>
+    </div>
+    <script>
+      function filterAll() {
+        var listItems = document.querySelectorAll('#tutorial-list li');
+        for (var i = 0; i < listItems.length; i++) {
+          listItems[i].style.display = 'list-item';
+        }
+      }
+      
+      function filterFH5() {
+        var listItems = document.querySelectorAll('#tutorial-list li');
+        for (var i = 0; i < listItems.length; i++) {
+          if (listItems[i].classList.contains('FH5')) {
+            listItems[i].style.display = 'list-item';
+          } else {
+            listItems[i].style.display = 'none';
+          }
+        }
+      }
+      
+      function filterFH4() {
+        var listItems = document.querySelectorAll('#tutorial-list li');
+        for (var i = 0; i < listItems.length; i++) {
+          if (listItems[i].classList.contains('FH4')) {
+            listItems[i].style.display = 'list-item';
+          } else {
+            listItems[i].style.display = 'none';
+          }
+        }
+      }
+    </script>
+
+<footer>
+  <div class="footer-icons">
+    <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+    <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+    <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+  </div>
+</footer>
+  </body>
+</html>

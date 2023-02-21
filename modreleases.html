@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forza Mods Mod Releases</title>
+    <link rel="stylesheet" href="fonts/css/all.css">
+    <script src="fonts/js/all.js"></script>
+    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
+  </head>
+  <header>
+    <a href="index.html"><button class="comeback-button">Home</button></a>
+</header>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 50px;
+}
+
+#filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+#filter-buttons button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#filter-buttons button:hover {
+  background-color: #005ea2;
+}
+
+#tutorial-list {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+#tutorial-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+#tutorial-list li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+#tutorial-list li:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#tutorial-list a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.html {
+  border-color: #f39c12;
+}
+
+.css {
+  border-color: #9b59b6;
+}
+
+@media screen and (max-width: 768px) {
+  #filter-buttons {
+    flex-wrap: wrap;
+  }
+  
+  #filter-buttons button {
+    flex-grow: 1;
+    margin: 5px;
+  }
+  
+  #tutorial-list {
+    margin: 30px 10px;
+  }
+}
+.comeback-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #0074d9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+}
+.footer a {
+			color: #fff;
+			margin: 0 10px;
+		}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: inline-block;
+}
+
+.footer-links i {
+  font-size: 24px;
+  color: #fff;
+  padding: 5px;
+  margin: 0 10px;
+}
+.footer-icons a {
+  margin: 0 10px !important;
+}
+.footer-links i:hover {
+  color: #bbb;
+  cursor: pointer;
+}
+.fa-discord {
+  color: #fff;
+}
+
+.fa-mug-hot {
+  color: #fff;
+}
+
+.fa-paypal {
+  color: #fff;
+}
+  </style>
+  <body>
+    <div id="filter-buttons">
+      <button onclick="filterFH5()">FH5</button>
+      <button onclick="filterFH4()">FH4</button>
+      <button onclick="filterFH3()">FH3</button>
+    </div>
+    <div id="tutorial-list">
+      <ul>
+        <li class="FH5"><a href="https://github.com/Yeethan69/AIO/releases/latest" target="_blank">AIO</a></li>
+        <li class="FH5"><a href="https://cdn.discordapp.com/attachments/1022453919496011776/1039981198937702400/DraffEnginePub.7z">Draff Engine</a></li>
+        <li class="FH5"><a href="https://cdn.discordapp.com/attachments/741590637773717526/969009471248531466/UniversalRT.CT">Ray Tracing Script</a></li>
+        <li class="FH5"><a href="https://cdn.discordapp.com/attachments/741590637773717526/920446463698419752/XPFinal.exe">XP Tool (no worky)</a></li>
+        <li class="FH5"><a href="https://cdn.discordapp.com/attachments/1023231168532971671/1071570814475980810/Das_Tuning_Menu.CT">Das Tuning Menu (Only ms works)</a></li>
+        <li class="FH5"><a href="https://cdn.discordapp.com/attachments/741590637773717526/933537595122667560/Oxides_Car_Pack.zip">Oxides Car Pack</a></li>
+        <li class="FH5"><a href="https://cdn.discordapp.com/attachments/741590637773717526/934520626000064582/FH5_Wing_Mods_v1.1.zip">Forza Aero Wing Replace Pack</a></li>
+        <li class="FH5"><a href="https://cdn.discordapp.com/attachments/741590637773717526/968184794380894268/Wheel_Pack.zip">Wheel Mod Pack</a></li>
+        <li class="FH5"><a href="https://github.com/ItsLogic/Easy-Wheel-Replace" target="_blank">Wheel Replacement Tool</a></li>
+        <li class="FH5"><a href="https://ldalvik.github.io/SwapBot/" target="_blank">Roots Rim Swapper</a></li>
+        <li class="FH5"><a href="https://drive.google.com/drive/u/1/folders/1zKN_QRgx30gK9hpXxyQhWfY5hS2KEM3r" target="_blank">Wòoflez Model Swaps</a></li>
+        <li class="FH4"><a href="https://www.unknowncheats.me/forum/other-games/415227-fh4-speed-hack.html" target="_blank">Speedhack</a></li>
+        <li class="FH4"><a href="https://cdn.discordapp.com/attachments/741590637773717526/860564851625689118/Autoshow-MS-Store-1.473.411.2.CT">Lastest MS Autoshow Script</a></li>
+        <li class="FH4"><a href="https://cdn.discordapp.com/attachments/741590637773717526/864298389827092520/Temp_Steam_Table.CT">Latest Steam Autoshow Script</a></li>
+        <li class="FH4"><a href="https://cdn.discordapp.com/attachments/741590637773717526/884870230000693338/grav_and_weird_stuff.CT">Latest Working Gravity and Weird Cheat Table (MS)</a></li>
+        <li class="FH4"><a href="https://cdn.discordapp.com/attachments/741590637773717526/879757080213479504/grav__weird_stuff_steam.CT">Latest Working Gravity and Weird Cheat Table (Steam)</a></li>     
+        <li class="FH4"><a href="https://cdn.discordapp.com/attachments/741590637773717526/863444057006145536/XPFinal.exe">XP tool</a></li>
+        <li class="FH4"><a href="https://cdn.discordapp.com/attachments/741590637773717526/875130344410583060/DecalUnlockFH4-1.473.947.2.CT">Unlock hidden decals</a></li>
+        <li class="FH4"><a href="https://github.com/Ldalvik/TuneDecoder" target="_blank">Roots Tune "Decoder"</a></li>        
+        <li class="FH3"><a href="https://cdn.discordapp.com/attachments/741590637773717526/830537791733628942/FH3.CT">Autoshow Script</a></li>
+        <li class="FH3"><a href="https://cdn.discordapp.com/attachments/457434543301984256/459883094514728961/forza_x64_release.CT">Photomode Cheat Table</a></li>
+        <li class="FH3"><a href="https://cdn.discordapp.com/attachments/741590637773717526/875140760641630208/DecalUnlock-FH3.CT">Unlock Hidden Decals</a></li>
+        <li class="FH3"><a href="https://cdn.discordapp.com/attachments/546453869581041664/574613966668431381/Save_Games.zip">Saves</a></li>
+        <li class="FH3"><a href="https://cs.rin.ru/forum/viewtopic.php?f=38&t=72399" target="_blank">FH3 Dev Build + Guide + Tools</a></li>
+        <li class="FH3"><a href="https://drive.google.com/file/d/1Y2JPfXPLQkEDpBEN1XW5mvcVEqOjDDEs/view?usp=sharing" target="_blank">FH3 Dev Build (GDrive)</a></li>
+        <li class="FH3"><a href="https://drive.google.com/file/d/1DAHGKUYbPkDau15W1XvAhmepbSDVjS0z/view" target="_blank">FH3.5 Ultimate (Dev build overhaul, required dev build) </a></li>
+      </ul>
+    </div>
+    <script>
+function filterFH5() {
+  var listItems = document.querySelectorAll('#tutorial-list li');
+  for (var i = 0; i < listItems.length; i++) {
+    if (listItems[i].classList.contains('FH5')) {
+      listItems[i].style.display = 'list-item';
+    } else {
+      listItems[i].style.display = 'none';
+    }
+  }
+  document.title = 'FH5 Mod Releases';
+}
+
+function filterFH4() {
+  var listItems = document.querySelectorAll('#tutorial-list li');
+  for (var i = 0; i < listItems.length; i++) {
+    if (listItems[i].classList.contains('FH4')) {
+      listItems[i].style.display = 'list-item';
+    } else {
+      listItems[i].style.display = 'none';
+    }
+  }
+  document.title = 'FH4 Mod Releases';
+}
+
+function filterFH3() {
+  var listItems = document.querySelectorAll('#tutorial-list li');
+  for (var i = 0; i < listItems.length; i++) {
+    if (listItems[i].classList.contains('FH3')) {
+      listItems[i].style.display = 'list-item';
+    } else {
+      listItems[i].style.display = 'none';
+    }
+  }
+  document.title = 'FH3 Mod Releases';
+}
+
+// Show only the FH5 category first
+filterFH5();
+    </script>
+<footer>
+  <div class="footer-icons">
+    <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+    <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+    <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+  </div>
+</footer>
+  </body>
+</html>

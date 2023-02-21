@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forza Mods FH5 Saveswapping</title>
+    <link rel="stylesheet" href="fonts/css/all.css">
+    <script src="fonts/js/all.js"></script>
+    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <style>
+.choice {
+          display: inline-block;
+          padding: 10px 20px;
+          margin: 10px;
+          background-color: #0074d9;
+          color :white;
+          border: 2px solid #0074d9;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        .choices {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Open Sans', sans-serif;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.question {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+		}
+		.button {
+			display: block;
+			margin: 0 auto;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+
+		.button:hover {
+			background-color: #444;
+		}
+
+		.footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.footer a {
+			color: #fff;
+			margin: 0 10px;
+		}
+.fa-discord {
+  color: #fff;
+}
+
+.fa-mug-hot {
+  color: #fff;
+}
+
+.fa-paypal {
+  color: #fff;
+}
+.text {
+    text-align: center;
+    display: none;
+}
+.comeback-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0074d9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.steam-text {
+	font-family: 'Open Sans', sans-serif;
+}
+.ms-store-text {
+	font-family: 'Open Sans', sans-serif;
+}
+    </style>
+          <header>
+            <a href="index.html"><button class="comeback-button">Home</button></a>
+        </header>
+    <body>
+        <div class="question" id="question">Which platform are you on?</div>
+
+		<div class="choices">
+			<div class="choice" id="steam">Steam</div>
+			<div class="choice" id="ms-store">MS Store</div>
+		</div>
+	</div>
+    <div class="text" id="steam-text">
+        <p>Take note of the xuid of the target save and your own profile save <a href="https://cxkes.me/xbox/xuid">(XUID Grabber)</a></p>
+        <p>Log out of the game on the title screen and realaunch the game</p>
+        <p>Press log in</p>
+        <p>Change the result to the XUID of the save you want</p>
+        <p>Press lets go and wait on the nickname selection screen</p>
+        <p>Check your save folder for a new XUID folder (if it exists close your game)</p>
+        <p>Replace the .profiledata in that folder with the save you want</p>
+        <p>Repeat steps 1 through 6 and it should take you in game with the new save</p>
+        <p>You will load in on a "fake" xbox account with that persons Gamertag</p>
+        <p>Search for every instance of the target XUID and replace it with yours</p>
+        <p>Switch cars to force a save and close the game</p>
+        <p>There will be a second profiledata file in your original XUID folder with the same file name as the one in the new XUID folder</p>
+        <p>Replace your original save with this save and relaunch the game
+        <p><strong>If you get a profile error for these steps, simply sign out of the Xbox app (not companion), sign into an alt account, sign out of that alt account, and back into the account you were using. You can also try killing GamingServices in details in task manager.</strong></p>
+        </p>
+        <p><strong><a href=" https://www.youtube.com/watch?v=DUFXoGFNaGw">Video Tutorial</a></strong></p>    
+<p><strong><a href="https://www.youtube.com/watch?v=3P7BuSOjTkc">Invalid Profile Bypass</a></strong></p> 
+<p><strong><a href="https://youtu.be/HNWceHMSFnc">Invalid Profile Bypass Lazy Way</a></strong></p>    
+    </div>
+    
+    <div class="text" id="ms-store-text">
+        <p>Back up and delete the contents of your "C:\Users\USER\AppData\Local\Packages\Microsoft.624F8B84B80_8wekyb3d8bbwe\SystemAppData" folder. Both wgs and helium <a href="https://cxkes.me/xbox/xuid">(XUID Grabber)</a></p>
+		<p>Take note of the xuid of the target save and your own profile save (https://cxkes.me/xbox/xuid)</p>
+		<p>Launch the game. When you get to the main menu do an 8byte search for your own XUID in CE</p>
+		<p>Press next scan until happy with results, then change all values to the XUID of the account you want to convert to</p>
+		<p>Press start in game and you will get hit with a new save prompt *</p>
+		<p>Quit and replace this newly created profiledata with the target profiledata</p>
+		<p>Repeat steps 3 to 6 but this time it will load the target profiledata when you press play</p>
+		<p>You will load in on a "fake" xbox account with that persons Gamertag</p>
+		<p>Search for every instance of the target XUID and replace it with yours</p>
+		<p>Switch cars to force a save and close the game</p>
+		<p>Copy the new save somewhere safe</p>
+        <p>Paste the backup from step 1 back into systemappdata and replace your profiledata with the one copied in step 11 (copy the modded one into the folder, then replace the name of the modded one with the name of your real profiledata)*</p>
+        <p>Restart the game and the save should load like normal as if it was yours to begin with</p>
+        <p><strong>If you get a profile error for these steps, simply sign out of the Xbox app (not companion), sign into an alt account, sign out of that alt account, and back into the account you were using. You can also try killing GamingServices in details in task manager.</strong></p>
+<p><strong><a href="https://youtu.be/Ggpd21Vc-O8">Video Tutorial</a></strong></p>    
+<p><strong><a href="https://www.youtube.com/watch?v=3P7BuSOjTkc">Invalid Profile Bypass</a></strong></p> 
+<p><strong><a href="https://youtu.be/HNWceHMSFnc">Invalid Profile Bypass Lazy Way</a></strong></p>    
+      </div>
+    <script>
+		const question = document.getElementById("question");
+		const choices = document.querySelectorAll(".choice");
+		const submitButton = document.getElementById("submit-button");
+
+		for (let choice of choices) {
+			choice.addEventListener("click", () => {
+				question.style.display = "none";
+				for (let c of choices) {
+					if (c != choice) {
+						c.style.display = "none";
+					}
+				}
+				submitButton.style.display = "none";
+
+				localStorage.setItem("platform", choice.id);
+			});
+		}
+        const steamBtn = document.getElementById('steam');
+        const msStoreBtn = document.getElementById('ms-store');
+        const steamText = document.getElementById('steam-text');
+        const msStoreText = document.getElementById('ms-store-text');
+
+        steamBtn.addEventListener('click', function() {
+            steamText.style.display = 'block';
+        });
+
+        msStoreBtn.addEventListener('click', function() {
+            msStoreText.style.display = 'block';
+        });
+        	</script>
+        <footer>
+            <div class="footer-icons">
+              <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+              <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+              <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+            </div>
+          </footer>
+    </body>
+</html>

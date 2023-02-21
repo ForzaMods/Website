@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forza Mods FH5 Fix textures on swapped parts</title>
+    <link rel="stylesheet" href="fonts/css/all.css">
+    <script src="fonts/js/all.js"></script>
+    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <style>
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0 -10px !important;
+  background-color: #333;
+}
+.footer a {
+			color: #fff;
+			margin: 0 10px;
+		}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: inline-block;
+}
+
+.footer-links i {
+  font-size: 24px;
+  color: #fff;
+  padding: 5px;
+  margin: 0 10px;
+}
+.footer-icons a {
+  margin: 0 10px !important;
+}
+.footer-links i:hover {
+  color: #bbb;
+  cursor: pointer;
+}
+.fa-discord {
+  color: #fff;
+}
+
+.fa-mug-hot {
+  color: #fff;
+}
+
+.fa-paypal {
+  color: #fff;
+}
+.comeback-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #0074d9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    </style>
+      <header>
+        <a href="models.html"><button class="comeback-button">Home</button></a>
+    </header>
+    <body>
+        <div style="font-family: 'Open Sans', sans-serif; text-align: center;">
+            <h1 style="font-weight: bold;">Quick model swap and fix textures on swapped parts</h1>
+            <h3 style="font-weight: bold;">Skip to #5 for texture only.</h3>
+            <p>1: Go to \media\Cars\ and choose both the car you want to mod and the one you are swapping the model/texture from </p>
+            <p>2: Copy both into a new workings folder and extract zips into seperate folders (modded and donor)</p>
+            <p>3: Open the donor car folder, locate the part you want to swap onto another car and copy it (wing_a.modelbin for example)</p>
+            <p>4: Open the modded car folder, locate the part you want to replace with the donor model, replace it with the copied donor .modelbin.</p>
+            <p>5: Open the donor car folder, locate the donor .carbin file in folder root and open into a hex editor (NIS_SilviaSpecR_00.carbin for example)</p>
+            <p>6: Search for the modelbin string you swapped such as Wing_a.modelbin</p>
+            <p>7: Count 0x46 (70 bytes) after the modelbin string to see the string <root>, hex 3C 72 6F 6F 74 3E</p>
+            <p>8: Select and copy from the start of <root> to the end of the .swatchbin, right before hex FF FF FF FF FF FF FF FF</p>
+            <p>9: Open the modded car folder and repeat from step 4, then copy the donor selected bytes over the modded selected bytes then hit save.</p>
+            <p>10: All texture errors should now be fixed on the model swapped part.</p>
+          </div>
+    </body>
+    <footer>
+        <div class="footer-icons">
+          <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+          <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+          <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+        </div>
+        </footer>
+</html>
