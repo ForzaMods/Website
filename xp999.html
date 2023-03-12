@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XP with 999 Engine</title>
+    <link rel="stylesheet" href="fonts/css/all.css">
+    <script src="fonts/js/all.js"></script>
+    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    <style>
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0 -10px !important;
+  background-color: #333;
+}
+.footer a {
+			color: #fff;
+			margin: 0 10px;
+		}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: inline-block;
+}
+
+.footer-links i {
+  font-size: 24px;
+  color: #fff;
+  padding: 5px;
+  margin: 0 10px;
+}
+.footer-icons a {
+  margin: 0 10px !important;
+}
+.footer-links i:hover {
+  color: #bbb;
+  cursor: pointer;
+}
+.fa-discord {
+  color: #fff;
+}
+
+.fa-mug-hot {
+  color: #fff;
+}
+
+.fa-paypal {
+  color: #fff;
+}
+.comeback-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #0074d9;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .settings-image {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.category h2 {
+  margin-bottom: 10px;
+}
+
+.category button {
+  padding: 10px 20px;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category button:hover {
+  background-color: #004b8d;
+}
+
+.category .details {
+  display: none;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.category .details p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.category .details a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.category .details a:hover {
+  background-color: #005299;
+}
+.category {
+    text-align: left;
+    margin: 0 0 20px;
+  }
+  .category h2:not(:first-of-type) {
+    text-align: center;
+  }
+  .details {
+    display: none;
+  }
+  .details.active {
+    display: block;
+  }
+    </style>
+      <header>
+        <a href="index.html"><button class="comeback-button">Home</button></a>
+    </header>
+    <body>
+        <div style="font-family: 'Open Sans', sans-serif; text-align: center;">
+            <h1 style="font-weight: bold;">XP with 999 Engine</h1>
+            <p><strong>You need to have enough credits to purchase 2019 BUGATI DIVIO</strong></p>
+            <p>Once you purchase the car go to car mastery and wait before unlocking XP</p>
+            <p>Go to engine select type as float, truncated scan option and value "20000"</p>
+            <div class="category">
+                <button onclick="showDetails('settings')">Settings you should use</button>
+                <div class="settings details">
+                    <img class="settings-image" src="https://cdn.discordapp.com/attachments/908293057479315456/1084489320464916571/image.png">
+                </div>
+            </div>
+            <h3 style="font-weight: bold;">Getting the XP</h3>
+            <p>You will find around 300 (count on top) addresses, hit next scan button 2-3 times.</p>
+            <p>Select all the addresses and exclude the green ones and input your desired XP.</p>
+            <p>Go back to game and now unlock XP your done. Enjoy!</p>
+            <p><strong>Big thanks and credits for finding this method to: R E S U R R E C T#4233</strong></p>
+            <p><strong><a href="https://mega.nz/file/oLwU2SyS#7ROWuThEAGDGCjzy9zBfWMacjGrdnoQiuqGlD17M1sI" target="_blank">999 Engine</a></strong></p>
+            <p><strong><a href="" target="_blank">Video Tutorial (not avaliable yet)</a></strong></p>
+          </div>
+    </body>
+    <script>
+        function showDetails(category) {
+          var details = document.getElementsByClassName(category);
+          for (var i = 0; i < details.length; i++) {
+            var display = details[i].style.display;
+            details[i].style.display = display === "none" || display === "" ? "block" : "none";
+          }
+        }
+          </script>
+
+    <footer>
+        <div class="footer-icons">
+          <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+          <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+          <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+        </div>
+        </footer>
+</html>
