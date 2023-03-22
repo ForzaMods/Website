@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Credits With 999 Engine</title>
+<head>
+    <title>FH5 Credits with 999</title>
     <link rel="stylesheet" href="fonts/css/all.css">
     <script src="fonts/js/all.js"></script>
     <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    </head>
-    <style>
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: 0 -10px !important;
-  background-color: #333;
-}
-.footer a {
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<style>
+        .choice {
+          display: inline-block;
+          padding: 10px 20px;
+          margin: 10px;
+          background-color: #0074d9;
+          color :white;
+          border: 2px solid #0074d9;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        .choices {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Open Sans', sans-serif;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.question {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+		}
+		.button {
+			display: block;
+			margin: 0 auto;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+
+		.button:hover {
+			background-color: #444;
+		}
+
+		.footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.footer a {
 			color: #fff;
 			margin: 0 10px;
 		}
-.footer-links {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  display: inline-block;
-}
-
-.footer-links i {
-  font-size: 24px;
-  color: #fff;
-  padding: 5px;
-  margin: 0 10px;
-}
-.footer-icons a {
-  margin: 0 10px !important;
-}
-.footer-links i:hover {
-  color: #bbb;
-  cursor: pointer;
-}
 .fa-discord {
   color: #fff;
 }
@@ -57,39 +81,190 @@ footer {
 .fa-paypal {
   color: #fff;
 }
+.text {
+    text-align: center;
+    display: none;
+}
 .comeback-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #0074d9;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-    }
-    </style>
-      <header>
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0074d9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.skillpoint-text {
+	font-family: 'Open Sans', sans-serif;
+}
+.wheelspin-text {
+	font-family: 'Open Sans', sans-serif;
+}
+.settings-image {
+  display: block;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.category h2 {
+  margin-bottom: 10px;
+}
+
+.category button {
+  padding: 10px 20px;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category button:hover {
+  background-color: #004b8d;
+}
+
+.category .details {
+  display: none;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.category .details p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.category .details a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.category .details a:hover {
+  background-color: #005299;
+}
+.category {
+    text-align: left;
+    margin: 0 0 20px;
+  }
+  .category h2:not(:first-of-type) {
+    text-align: center;
+  }
+  .details {
+    display: none;
+  }
+  .details.active {
+    display: block;
+  }
+	</style>
+</head>
+<body>
+    <header>
         <a href="index.html"><button class="comeback-button">Home</button></a>
-    </header>
-    <body>
-        <div style="font-family: 'Open Sans', sans-serif; text-align: center;">
-            <h3 style="font-weight: bold;">Credits With 999 Engine</h3>
-            <p>1. Open spins until you get a car you already own</p>
-            <p>2. Check for how much you can sell the car (where it shows keep or sold for : ??.???CR)</p>
-            <p>3. Open 999 Engine, select Forza Horizon 5 then search for double the amount of CR you can sell the car</p>
-            <p><code>(For example if it shows "Sell for 35.000CR", search for "70000" in 999 Engine)</code></p>
-            <p>4. After scanning, only select the white values, not the red and green ones (if there is some)</p>
-            <p>5. Then replace it by what you want </p>
-            <p><code>(note that you will have half the CR that you entered, if you replaced 70000 by 300000, you will receive 150000 when selling the car)</code></p>
-            <h3 style="font-weight: bold;">Credits to: nousername#1372</h3>
-          </div>
-    </body>
-    <footer>
-        <div class="footer-icons">
-          <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
-          <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
-          <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+      </header>
+	<div class="container">
+		<div class="question" id="question">Which platform do you use?</div>
+
+		<div class="choices">
+			<div class="choice" id="wheelspin">Wheelspin Method</div>
+			<div class="choice" id="skillpoint">Skillpoint Method</div>
+		</div>
+	</div>
+    <div class="text" id="wheelspin-text">
+        <h3 style="font-weight: bold;">Credits With 999 Engine (Wheelspin)</h3>
+        <p>Open spins until you get a car you already own</p>
+        <p>Check for how much you can sell the car</p>
+        <p>Open 999 Engine, select Forza Horizon 5 then search for double the amount of CR you can sell the car</p>
+        <p>After scanning, only select the white values, not green ones</p>
+        <p>Then replace it by what you want</p>
+        <p><code>(note that you will have half the CR that you entered, if you replaced 70000 by 300000, you will receive 150000 when selling the car)</code></p>
+        <p><strong><a href="https://cdn.discordapp.com/attachments/1022453919496011776/1088136939875602622/999_Engine.zip" target="_blank">999 Engine</a></strong></p>
+    </div>
+    
+    <div class="text" id="skillpoint-text">
+        <h3 style="font-weight: bold;">Credits With 999 Engine (Skillpoint)</h3>
+		<p><strong>Use any car you want</strong></p>
+		<p>Go into the car mastery</p>
+		<p>In the value box use the car credits value then search</p>
+        <div class="category">
+            <button onclick="showDetails('settings')">Settings you should use</button>
+            <div class="settings details">
+                <img class="settings-image" src="https://cdn.discordapp.com/attachments/908293057479315456/1088092479817003060/image.png">
+            </div>
         </div>
-        </footer>
+        <h3 style="font-weight: bold;">Getting the credits</h3>
+		<p>Go one up and one down from the cr value (Forza)</p>
+		<p>Now hit next scan 5 times in 999 Engine</p>
+		<p>Select all values, except the green ones</p>
+		<p>Change the cr to what you want and then unlock the skillpoint</p>
+        <p><strong><a href="https://cdn.discordapp.com/attachments/1022453919496011776/1088136939875602622/999_Engine.zip" target="_blank">999 Engine</a></strong></p>
+        <p><strong><a href="https://youtu.be/6p0bQ28UVE4" target="_blank">Video Tutorial</a></strong></p>
+    </div>
+<footer>
+    <div class="footer">
+        <div class="footer-icons">
+            <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+            <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+      </div>
+    </footer>
+	<script>
+		const question = document.getElementById("question");
+		const choices = document.querySelectorAll(".choice");
+		const submitButton = document.getElementById("submit-button");
+
+		for (let choice of choices) {
+			choice.addEventListener("click", () => {
+				question.style.display = "none";
+				for (let c of choices) {
+					if (c != choice) {
+						c.style.display = "none";
+					}
+				}
+				submitButton.style.display = "none";
+
+				localStorage.setItem("platform", choice.id);
+			});
+		}
+        const steamBtn = document.getElementById('wheelspin');
+        const msStoreBtn = document.getElementById('skillpoint');
+        const steamText = document.getElementById('wheelspin-text');
+        const msStoreText = document.getElementById('skillpoint-text');
+
+        steamBtn.addEventListener('click', function() {
+            steamText.style.display = 'block';
+        });
+
+        msStoreBtn.addEventListener('click', function() {
+            msStoreText.style.display = 'block';
+        });
+
+        function showDetails(category) {
+          var details = document.getElementsByClassName(category);
+          for (var i = 0; i < details.length; i++) {
+            var display = details[i].style.display;
+            details[i].style.display = display === "none" || display === "" ? "block" : "none";
+          }
+        }
+        	</script>
+</body>
 </html>

@@ -195,6 +195,12 @@ body {
   overflow-y: scroll;
   padding-right: 17px;
 }
+#tutorial-list li.FH5 {
+  display: list-item;
+}
+#tutorial-list li.FH4 {
+  display: none;
+}
     </style>
   </head>
   <header>
@@ -218,14 +224,12 @@ body {
         <li class="FH5"><a href="xp999.html">FH5 XP With 999 Engine</a></li>
         <li class="FH5"><a href="fh5resetsave.html">FH5 Reset Save</a></li>
         <li class="FH5"><a href="cars.html">FH5 AIO Cars after update</a></li>
-        <li class="FH5"><a href="https://youtu.be/XHV09CZdvsA">FH5 Custom Intro</a></li>
-        <li class="FH5"><a href="https://drive.google.com/file/d/1E5cgGmbLgaHdmKL6_KqeIu1wr2ot3ChX/view?usp=sharing">FH5 Custom Loading Screens</a></li>
         <li class="FH5"><a href="fh5saveswapping.html">FH5 Saveswapping</a></li>
         <li class="FH5"><a href="resetrank.html">FH5 How to reset rank to level 1</a></li>
         <li class="FH5"><a href="maxcredits.html">FH5 Max Credits</a></li>
         <li class="FH5"><a href="badges.html">FH5 Equip Any Badge With AIO</a></li>
         <li class="FH4"><a href="fh4saveswapping.html">FH4 Saveswapping</a></li>
-        <li class="FH4"><a href="fh4online.html">FH4 Play online (Steam) while banned on MS Store</a></li>
+
       </ul>
     </div>
     <script>
@@ -246,7 +250,8 @@ body {
           }
         }
       }
-      
+
+
       function filterFH4() {
         var listItems = document.querySelectorAll('#tutorial-list li');
         for (var i = 0; i < listItems.length; i++) {
