@@ -10,12 +10,6 @@
     <a href="index.html"><button class="comeback-button">Home</button></a>
 </header>
   <style>
-    body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-}
-
 h1 {
   text-align: center;
   color: #333;
@@ -27,9 +21,6 @@ h1 {
   justify-content: center;
   margin-top: 30px;
 }
-body {
-    font-family: 'Open Sans', sans-serif;
-  }
 #filter-buttons button {
   background-color: #0074d9;
   color: #fff;
@@ -46,32 +37,36 @@ body {
 }
 
 #tutorial-list {
+  background-color: #3e4151;
   max-width: 800px;
   margin: 50px auto;
 }
 
 #tutorial-list ul {
+  background-color: #44475A;
   list-style: none;
   padding: 0;
 }
 
 #tutorial-list li {
+  background-color: #2d2f3a;
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #fff;
   transition: all 0.3s ease;
 }
 
 #tutorial-list li:hover {
+  background-color: #44475A;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 #tutorial-list a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .html {
@@ -84,17 +79,33 @@ body {
 
 @media screen and (max-width: 768px) {
   #filter-buttons {
+    background-color: #44475A;
     flex-wrap: wrap;
+    color: #fff;
   }
   
   #filter-buttons button {
+    background-color: #44475A;
     flex-grow: 1;
     margin: 5px;
+    color: #fff;
   }
   
   #tutorial-list {
+    
     margin: 30px 10px;
+    color: #fff;
   }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #44475A;
+   color: #f8f8f2;
+}
+a {
+  color: #009dff;
 }
 .comeback-button {
       position: absolute;
@@ -164,10 +175,9 @@ body {
     </div>
     <div id="tutorial-list">
       <ul>
-        <li class="FH5"><a href="https://github.com/Yeethan69/AIO/releases/latest" target="_blank">AIO (wait for an update)</a></li>
+        <li class="FH5"><a href="https://github.com/Yeethan69/AIO/releases/latest" target="_blank">AIO (wait for an update {prolly never going to comeback})</a></li>
         <li class="FH5"><a href="https://cdn.discordapp.com/attachments/1022453919496011776/1088136939875602622/999_Engine.zip" target="_blank">999 Engine</a></li>
         <li class="FH5"><a href="https://cdn.discordapp.com/attachments/741590637773717526/969009471248531466/UniversalRT.CT">Ray Tracing Script</a></li>
-        <li class="FH5"><a href="https://cdn.discordapp.com/attachments/741590637773717526/920446463698419752/XPFinal.exe">XP Tool (doesnt work)</a></li>
         <li class="FH5"><a href="https://cdn.discordapp.com/attachments/1023231168532971671/1083443833871814656/Das_Tuning_Menu.CT">Das Tuning Menu (works for ms)</a></li>
         <li class="FH5"><a href="https://cdn.discordapp.com/attachments/741590637773717526/933537595122667560/Oxides_Car_Pack.zip">Oxides Car Pack</a></li>
         <li class="FH5"><a href="https://cdn.discordapp.com/attachments/741590637773717526/934520626000064582/FH5_Wing_Mods_v1.1.zip">Forza Aero Wing Replace Pack</a></li>
@@ -229,7 +239,6 @@ function filterFH3() {
   document.title = 'FH3 Mod Releases';
 }
 
-// Show only the FH5 category first
 filterFH5();
     </script>
 <footer>

@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Forza Mods FH5 Clear Tails</title>
+    <title>Smoked/Clear Tails</title>
     <link rel="stylesheet" href="fonts/css/all.css">
     <script src="fonts/js/all.js"></script>
     <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <style>
+              body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #44475A;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+   color: #f8f8f2;
+}
+a {
+  color: #009dff;
+}
 footer {
   background-color: #333;
   color: #fff;
@@ -74,17 +85,16 @@ footer {
     </header>
     <body>
         <div style="font-family: 'Open Sans', sans-serif; text-align: center;">
-            <h1 style="font-weight: bold;">Clear tails</h1>
-            <h3 style="font-weight: bold;">Names may differ for each car but layout is the same. This is using the names for the S13.</h3>
-            <p>1. Open glassLTL and glassRTL modelbins.</p>
-            <p>2. Within the first few lines you will see "border_red" "border_white" "glass_red" "glass_white" "border_amber" "glass_amber" or something similar.</p>
-            <p>3. Directly after the term there will be 00,01,02,03,etc</p>
-            <p>4. Now find the position string (starts with 80 3F, will be 30 long including 80 3F and 4 00's at minimum)</p>
-            <p>5. Shortly before or after you will see FF FF XX 00 FF FF FF or similar.</p>
-            <p>6. The XX will be 00,01,02,etc and you will need to change it to what is desired. </p>
-            <p>7. For example glass_white is 01, glass_red is 02, and glass_amber is 03. If i want all clear I will replace all FF FF 02 FF FF FF and FF FF 03 FF FF FF with FF FF 01 FF FF FF.</p>
-            <p>8. This will make all glass_red and glass_amber use the glass_white from the reverse lights.
-            </p>
+            <h3 style="font-weight: bold;">Smoked/Clear tails tutorial</h3>
+            <p><strong>Names may may differ for the material entries</strong></p>
+            <p>Open the modelbins with the name of: <code>glass_RTL</code> and <code>glass_LTL</code></p>
+            <p>Run D3's template</p>
+            <p>Im using the 2018 Mustang GT so i open the only material entry called <code>gls_colored.materialbin</code></p>
+            <p>Now open it and scroll down to the RGB values</p>
+            <p>For smoked tails do <code>0</code> for all values</p>
+            <p>For clear tails do <code>1</code> for all values</p>
+            <p>Save the first modelbin and repeat steps for the other</p>
+            <p><strong>Thanks to <code>kdn#0036</code> for discovering and telling me about this method</strong></p>
           </div>
     </body>
     <footer>

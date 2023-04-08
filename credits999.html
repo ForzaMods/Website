@@ -23,11 +23,17 @@
           justify-content: center;
           align-items: center;
         }
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: 'Open Sans', sans-serif;
-		}
+        body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #44475A;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+   color: #f8f8f2;
+}
+a {
+  color: #009dff;
+}
 		.container {
 			max-width: 800px;
 			margin: 0 auto;
@@ -179,14 +185,14 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><button class="comeback-button">Home</button></a>
+        <a href="index"><button class="comeback-button">Home</button></a>
       </header>
 	<div class="container">
 		<div class="question" id="question">What method you do wanna use?</div>
 
 		<div class="choices">
+      <div class="choice" id="skillpoint">Skillpoint Method</div>
 			<div class="choice" id="wheelspin">Wheelspin Method</div>
-			<div class="choice" id="skillpoint">Skillpoint Method</div>
 		</div>
 	</div>
     <div class="text" id="wheelspin-text">
@@ -201,10 +207,13 @@
     </div>
     
     <div class="text" id="skillpoint-text">
-        <h3 style="font-weight: bold;">Credits With 999 Engine (Skillpoint)</h3>
-		<p><strong>Use any car you want</strong></p>
+        <h2 style="font-weight: bold;">Credits With 999 Engine (Skillpoint)</h2>
+        <p>Recommendations: Any car that doesnt have the 10000 cr skillpoint value, because it works the best</p>
+        <p>Use any car you want</p>
+        <p>You need to have atleast one skillpoint to do this method</p>
+        <h2 style="font-weight: bold;">Start of the method</h2>
 		<p>Go into the car mastery</p>
-		<p>In the value box use the car credits value then search</p>
+		<p>In the value box use the skillpoints credits value then first scan</p>
         <div class="category">
             <button onclick="showDetails('settings')">Settings you should use</button>
             <div class="settings details">
@@ -246,17 +255,17 @@
 				localStorage.setItem("platform", choice.id);
 			});
 		}
-        const steamBtn = document.getElementById('wheelspin');
-        const msStoreBtn = document.getElementById('skillpoint');
-        const steamText = document.getElementById('wheelspin-text');
-        const msStoreText = document.getElementById('skillpoint-text');
+        const wheelspinBtn = document.getElementById('wheelspin');
+        const skillpointBtn = document.getElementById('skillpoint');
+        const wheelspinText = document.getElementById('wheelspin-text');
+        const skillpointText = document.getElementById('skillpoint-text');
 
-        steamBtn.addEventListener('click', function() {
-            steamText.style.display = 'block';
+        wheelspinBtn.addEventListener('click', function() {
+            wheelspinText.style.display = 'block';
         });
 
-        msStoreBtn.addEventListener('click', function() {
-            msStoreText.style.display = 'block';
+        skillpointBtn.addEventListener('click', function() {
+            skillpointText.style.display = 'block';
         });
 
         function showDetails(category) {

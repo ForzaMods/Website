@@ -76,18 +76,18 @@ footer {
   border-radius: 10px 10px 10px 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
-.category {
+.image {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
 }
 
-.category h2 {
+.image h2 {
   margin-bottom: 10px;
 }
 
-.category button {
+.image button {
   padding: 10px 20px;
   background-color: #0074d9;
   color: white;
@@ -98,22 +98,22 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-.category button:hover {
+.image button:hover {
   background-color: #004b8d;
 }
 
-.category .details {
+.image .details {
   display: none;
   margin: 20px 0;
   text-align: center;
 }
 
-.category .details p {
+.image .details p {
   font-size: 18px;
   margin: 10px 0;
 }
 
-.category .details a {
+.image .details a {
   display: inline-block;
   padding: 10px 20px;
   background-color: #0074d9;
@@ -125,14 +125,14 @@ footer {
   margin: 20px 0;
 }
 
-.category .details a:hover {
+.image .details a:hover {
   background-color: #005299;
 }
-.category {
+.image {
     text-align: left;
     margin: 0 0 20px;
   }
-  .category h2:not(:first-of-type) {
+  .image h2:not(:first-of-type) {
     text-align: center;
   }
   .details {
@@ -141,26 +141,40 @@ footer {
   .details.active {
     display: block;
   }
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #44475A;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+   color: #f8f8f2;
+}
+a {
+  color: #009dff;
+}
     </style>
       <header>
         <a href="index.html"><button class="comeback-button">Home</button></a>
     </header>
     <body>
         <div style="font-family: 'Open Sans', sans-serif; text-align: center;">
-            <h1 style="font-weight: bold;">XP with 999 Engine</h1>
-            <p><strong>You can do this with any car you want</strong></p>
-            <p>Once you purchase the car go to car mastery and wait before unlocking XP</p>
-            <p>Go to engine select type as float, truncated scan option and value of the xp skillpoint</p>
-            <div class="category">
+            <h2 style="font-weight: bold;">XP with 999 Engine</h2>
+            <p>Recommendations: car that has a 7000,9000,15000 xp skillpoint value, works the best</p>
+            <p>You can do this with any car you want</p>
+            <p>You need to have atleast one skillpoint</p>
+            <h2 style="font-weight: bold;">Start of the method</h2>
+            <p>Go to car mastery and wait before unlocking XP</p>
+            <p>Go to 999 engine select type as float, truncated scan option and enter the value of the xp skillpoint</p>
+            <div class="image">
                 <button onclick="showDetails('settings')">Settings you should use</button>
                 <div class="settings details">
                     <img class="settings-image" src="https://cdn.discordapp.com/attachments/908293057479315456/1088102806726127648/image.png">
                 </div>
             </div>
             <h3 style="font-weight: bold;">Getting the XP</h3>
-            <p>You will find around 300 (count on top) addresses, add <code>.000</code> at the end of your value box and hit next scan button 2-3 times.</p>
-            <p>Select all the addresses and exclude the green ones and input your desired XP. (when you dont see green just select all)</p>
-            <p>Go back to game and now unlock XP your done. Enjoy!</p>
+            <p>You will find around 300-750 (count on top) addresses (if you didnt find that low dont worry), add <code>.000</code> at the end of your value box and hit next scan button 4-5 times.</p>
+            <p>Select all the addresses and exclude the green ones (hold ctrl and click lmb on them) and input your desired XP. (when you dont see green just select all)</p>
+            <p>Go back to game and now unlock XP, and your done. Enjoy!</p>
             <p><strong>Big thanks and credits for finding this method to: R E S U R R E C T#4233</strong></p>
             <p><strong><a href="https://cdn.discordapp.com/attachments/1022453919496011776/1088136939875602622/999_Engine.zip" target="_blank">999 Engine</a></strong></p>
             <p><strong><a href="https://youtu.be/2ALYTy6zBQk" target="_blank">Video Tutorial</a></strong></p>
@@ -168,8 +182,8 @@ footer {
           </div>
     </body>
     <script>
-        function showDetails(category) {
-          var details = document.getElementsByClassName(category);
+        function showDetails(image) {
+          var details = document.getElementsByClassName(image);
           for (var i = 0; i < details.length; i++) {
             var display = details[i].style.display;
             details[i].style.display = display === "none" || display === "" ? "block" : "none";

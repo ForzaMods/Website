@@ -9,17 +9,21 @@
     <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Open Sans', sans-serif;
+    background-color: #44475A;
+   color: #f8f8f2;
 }
 
-h1 {
-  text-align: center;
-  color: #333;
-  margin-top: 50px;
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+a {
+  color: #ff79c6;
 }
 
 #filter-buttons {
+  color: #fff;
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -41,53 +45,65 @@ h1 {
 }
 
 #tutorial-list {
+  
   max-width: 800px;
   margin: 50px auto;
 }
 
 #tutorial-list ul {
+  
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   list-style: none;
   padding: 0;
 }
 
 #tutorial-list li {
+  background-color: #2d2f3a;
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #fff;
   transition: all 0.3s ease;
 }
 
 #tutorial-list li:hover {
+  background-color: #2d2f3a;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 #tutorial-list a {
-  color: #333;
+  background-color: #2d2f3a;
   text-decoration: none;
   font-size: 18px;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .html {
+  color: #fff;
   border-color: #f39c12;
 }
 
 .css {
   border-color: #9b59b6;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
   #filter-buttons {
     flex-wrap: wrap;
+    color: #fff;
   }
   
   #filter-buttons button {
     flex-grow: 1;
     margin: 5px;
+    color: #fff;
   }
   
   #tutorial-list {
+    background-color: #2d2f3a;
+    color: #fff;
     margin: 30px 10px;
   }
 }
@@ -139,9 +155,7 @@ footer {
 .fa-paypal {
   color: #fff;
 }
-body {
-    font-family: 'Open Sans', sans-serif;
-  }
+
 .modreleases-button {
       position: absolute;
       top: 10px;
@@ -153,21 +167,10 @@ body {
       border: none;
       cursor: pointer;
     }
-    .savegames-button {
-      position: absolute;
-      top: 10px;
-      right: 145px;
-      background-color: #0074d9;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-    }
     .models-button {
       position: absolute;
       top: 10px;
-      right: 265px;
+      right: 140px;
       background-color: #0074d9;
       color: white;
       padding: 10px 20px;
@@ -178,7 +181,7 @@ body {
     .about-button {
       position: absolute;
       top: 10px;
-      right: 405px;
+      right: 280px;
       background-color: #0074d9;
       color: white;
       padding: 10px 20px;
@@ -197,15 +200,18 @@ body {
 }
 #tutorial-list li.FH5 {
   display: list-item;
+  background-color: #2d2f3a;
+  color: white;
 }
 #tutorial-list li.FH4 {
   display: none;
+  background-color: #2d2f3a;
+  color: white;
 }
     </style>
   </head>
   <header>
     <a href="modreleases.html"><button class="modreleases-button">Mod Releases</button></a>
-    <a href="savegames1.html"><button class="savegames-button">Savegames</button></a>
     <a href="models.html"><button class="models-button">Modelswapping</button></a>
     <a href="about.html"><button class="about-button">About</button></a>
 </header>
@@ -220,12 +226,11 @@ body {
     <div id="tutorial-list">
       <ul>
         <li class="FH5"><a href="https://forzamods.github.io/credits999">FH5 Credits With 999 Engine</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/skilltree">FH5 Modify Skilltree With 999 Engine</a></li>
         <li class="FH5"><a href="https://forzamods.github.io/cars999">FH5 Cars With 999 Engine</a></li>
         <li class="FH5"><a href="https://forzamods.github.io/xp999">FH5 XP With 999 Engine</a></li>
+        <li class="FH5"><a href="https://forzamods.github.io/skilltree">FH5 Modify Skilltree With 999 Engine</a></li>
         <li class="FH5"><a href="https://forzamods.github.io/fh5resetsave">FH5 Reset Save</a></li>
         <li class="FH5"><a href="https://forzamods.github.io/cars">FH5 AIO Cars after update</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/fh5saveswapping">FH5 Saveswapping</a></li>
         <li class="FH5"><a href="https://forzamods.github.io/resetrank">FH5 How to reset rank to level 1</a></li>
         <li class="FH5"><a href="https://forzamods.github.io/maxcredits">FH5 Max Credits</a></li>
         <li class="FH5"><a href="https://forzamods.github.io/badges">FH5 Equip Any Badge With AIO</a></li>
