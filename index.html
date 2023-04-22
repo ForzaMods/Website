@@ -1,282 +1,125 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Homepage</title>
-    <link rel="stylesheet" href="fonts/css/all.css">
-    <script src="fonts/js/all.js"></script>
-    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <style>
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-    background-color: #44475A;
-   color: #f8f8f2;
-}
+    <head>
+        <title>Main page</title>
+        <link rel="stylesheet" href="fonts/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+        <link rel="shortcut icon" href="fonts/forzamods.ico">
 
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
-}
-
-a {
-  color: #ff79c6;
-}
-
-#filter-buttons {
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-#filter-buttons button {
-  background-color: #0074d9;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#filter-buttons button:hover {
-  background-color: #005ea2;
-}
-
-#tutorial-list {
-  
-  max-width: 800px;
-  margin: 50px auto;
-}
-
-#tutorial-list ul {
-  
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  list-style: none;
-  padding: 0;
-}
-
-#tutorial-list li {
-  background-color: #2d2f3a;
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-#tutorial-list li:hover {
-  background-color: #2d2f3a;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-#tutorial-list a {
-  background-color: #2d2f3a;
-  text-decoration: none;
-  font-size: 18px;
-  color: #fff;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.html {
-  color: #fff;
-  border-color: #f39c12;
-}
-
-.css {
-  border-color: #9b59b6;
-  color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  #filter-buttons {
-    flex-wrap: wrap;
-    color: #fff;
-  }
-  
-  #filter-buttons button {
-    flex-grow: 1;
-    margin: 5px;
-    color: #fff;
-  }
-  
-  #tutorial-list {
-    background-color: #2d2f3a;
-    color: #fff;
-    margin: 30px 10px;
-  }
-}
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #333;
-}
-.footer a {
-			color: #fff;
-			margin: 0 10px;
-		}
-.footer-links {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  display: inline-block;
-}
-
-.footer-links i {
-  font-size: 24px;
-  color: #fff;
-  padding: 5px;
-  margin: 0 10px;
-}
-.footer-icons a {
-  margin: 0 10px !important;
-}
-.footer-links i:hover {
-  color: #bbb;
-  cursor: pointer;
-}
-.fa-discord {
-  color: #fff;
-}
-
-.fa-mug-hot {
-  color: #fff;
-}
-
-.fa-paypal {
-  color: #fff;
-}
-
-.modreleases-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #0074d9;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-    }
-    .models-button {
-      position: absolute;
-      top: 10px;
-      right: 140px;
-      background-color: #0074d9;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-    }
-    .about-button {
-      position: absolute;
-      top: 10px;
-      right: 280px;
-      background-color: #0074d9;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-    }
-    body {
-  overflow: hidden;
-}
-
-.wrapper {
-  height: 100%;
-  overflow-y: scroll;
-  padding-right: 17px;
-}
-#tutorial-list li.FH5 {
-  display: list-item;
-  background-color: #2d2f3a;
-  color: white;
-}
-#tutorial-list li.FH4 {
-  display: none;
-  background-color: #2d2f3a;
-  color: white;
-}
-    </style>
-  </head>
-  <header>
-    <a href="modreleases.html"><button class="modreleases-button">Mod Releases</button></a>
-    <a href="models.html"><button class="models-button">Modelswapping</button></a>
-    <a href="about.html"><button class="about-button">About</button></a>
-</header>
-  <body>
-    
-    <div id="filter-buttons">
-      <button onclick="filterAll()">All</button>
-      <button onclick="filterFH5()">FH5</button>
-      <button onclick="filterFH4()">FH4</button>
-    </div>
-    
-    <div id="tutorial-list">
-      <ul>
-        <li class="FH5"><a href="https://forzamods.github.io/credits999">FH5 Credits With 999 Engine</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/cars999">FH5 Cars With 999 Engine</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/xp999">FH5 XP With 999 Engine</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/skilltree">FH5 Modify Skilltree With 999 Engine</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/fh5resetsave">FH5 Reset Save</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/cars">FH5 AIO Cars after update</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/resetrank">FH5 How to reset rank to level 1</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/maxcredits">FH5 Max Credits</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/badges">FH5 Equip Any Badge With AIO</a></li>
-        <li class="FH5"><a href="https://forzamods.github.io/carids">FH5 Car ID's</a></li>
-        <li class="FH4"><a href="https://forzamods.github.io/fh4saveswapping">FH4 Saveswapping</a></li>
-
-      </ul>
-    </div>
-    <script>
-      function filterAll() {
-        var listItems = document.querySelectorAll('#tutorial-list li');
-        for (var i = 0; i < listItems.length; i++) {
-          listItems[i].style.display = 'list-item';
+        <style>
+        body {
+            margin: 0;
+            color: white;
+            background-color: #44475A;
+            font-family: 'Open Sans', sans-serif;
+            overflow: hidden;
         }
-      }
-      
-      function filterFH5() {
-        var listItems = document.querySelectorAll('#tutorial-list li');
-        for (var i = 0; i < listItems.length; i++) {
-          if (listItems[i].classList.contains('FH5')) {
-            listItems[i].style.display = 'list-item';
-          } else {
-            listItems[i].style.display = 'none';
-          }
+
+        footer {
+            color: white;
+            background-color: #333;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            padding: 7px;
+            position: absolute;
+            margin: 0 -7px;
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
         }
-      }
 
-
-      function filterFH4() {
-        var listItems = document.querySelectorAll('#tutorial-list li');
-        for (var i = 0; i < listItems.length; i++) {
-          if (listItems[i].classList.contains('FH4')) {
-            listItems[i].style.display = 'list-item';
-          } else {
-            listItems[i].style.display = 'none';
-          }
+        .footer-icons a {
+            margin: 0 5px;
         }
-      }
-    </script>
 
-<footer>
-  <div class="footer-icons">
-    <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
-    <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
-    <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
-  </div>
-</footer>
-  </body>
+        .fas,
+        .fab {
+            color: white;
+        }
+
+       .button {
+            color: white;
+            background-color: #0088FF;
+            position: absolute;
+            border: none;
+            top: 10px;
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-size: 13px;
+            font-family: 'Open Sans', sans-serif;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        
+        #models {
+            right: 10px;
+        }
+
+        #about {
+            right: 135px;
+        }
+
+        #tutorial-list {
+            max-width: 700px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        #tutorial-list li {
+            background-color: #2d2f3a;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        #tutorial-list li:hover {
+            background-color: #1c1d26;
+            box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7);
+            transform: scale(1.05);
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        #tutorial-list a {
+            font-size: 17px;
+            color: white;
+            display: block;
+            text-decoration: none;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        #tutorial-list ul {
+            list-style: none;
+        }
+        </style>
+    </head>
+
+    <header>
+        <a href="https://forzamods.github.io/about"><button id="about" class="button">About</button></a>
+        <a href="https://forzamods.github.io/models"><button id="models" class="button">Modelswapping</button></a>
+    </header>
+
+    <body>
+        <div id="tutorial-list">
+            <ul>
+                <li><a href="https://forzamods.github.io/credits999">Credits with 999 Engine</a></li>
+                <li><a href="https://forzamods.github.io/cars999">Cars with 999 Engine</a></li>
+                <li><a href="https://forzamods.github.io/xp999">XP with 999 Engine</a></li>
+                <li><a href="https://forzamods.github.io/resetsave">How to reset save</a></li>
+                <li><a href="https://forzamods.github.io/resetrank">How to reset rank to level 1</a></li>
+                <li><a href="https://forzamods.github.io/carids">How to get Car ID's yourself</a></li>
+            </ul>
+        </div>
+    </body>
+
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://discord.com/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+            <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+        </div>
+    </footer>
+
 </html>

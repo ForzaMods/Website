@@ -1,105 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>FH5 Wheelswap</title>
-    <link rel="stylesheet" href="fonts/css/all.css">
-    <script src="fonts/js/all.js"></script>
-    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <head>
+        <title>Wheelswap tutorial</title>
+        <link rel="stylesheet" href="fonts/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+        <link rel="shortcut icon" href="fonts/forzamods.ico">
+
+        <style>
+            body {
+                margin: 0;
+                color: white;
+                background-color: #44475A;
+                text-align: center;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+                font-family: 'Open Sans', sans-serif;
+                overflow: hidden;
+            }
+
+            footer {
+                color: white;
+                background-color: #333;
+                text-align: center;
+                width: 100%;
+                bottom: 0;
+                padding: 7px;
+                position: absolute;
+                margin: 0 -7px;
+                border-top-right-radius: 50px;
+                border-top-left-radius: 50px;
+            }
+
+            .footer-icons a {
+                margin: 0 5px;
+            }
+            
+            .fab,
+            .fas {
+                color: white;
+            }
+
+            .button {
+                color: white;
+                background-color: #0088ff;
+                position: absolute;
+                border: none;
+                top: 10px;
+                right: 10px;
+                border-radius: 10px;
+                padding: 10px 12px;
+                font-size: 13px;
+                font-family: 'Open Sans', sans-serif;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+            }
+        </style>
     </head>
-    <style>
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: 0 -10px !important;
-  background-color: #333;
-}
-.footer a {
-			color: #fff;
-			margin: 0 10px;
-		}
-.footer-links {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
 
-.footer-links a {
-  display: inline-block;
-}
-
-.footer-links i {
-  font-size: 24px;
-  color: #fff;
-  padding: 5px;
-  margin: 0 10px;
-}
-.footer-icons a {
-  margin: 0 10px !important;
-}
-.footer-links i:hover {
-  color: #bbb;
-  cursor: pointer;
-}
-.fa-discord {
-  color: #fff;
-}
-
-.fa-mug-hot {
-  color: #fff;
-}
-
-.fa-paypal {
-  color: #fff;
-}
-.comeback-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #0074d9;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-    }
-    body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #44475A;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-   color: #f8f8f2;
-}
-a {
-  color: #009dff;
-}
-    </style>
-      <header>
-        <a href="models.html"><button class="comeback-button">Home</button></a>
+    <header>
+        <a href="https://forzamods.github.io/models" target="_blank"><button class="button">Main page</button></a>
     </header>
+
     <body>
-        <div style="font-family: 'Open Sans', sans-serif; text-align: center;">
-            <h1 style="font-weight: bold;">Wheelswap Tutorial</h1>
-            <p>1. Go to \media\cars\_library\scene\wheels and choose any wheel you dont want anymore, in this case i use HAL_Indy and extract it to a new folder on your Desktop.</p>
-            <p>2. Choose the car that you want the wheels from which can be found in \media\cars, i picked mg_metro6r4_86. Open the zip, inside the zip go to \scene\_library\Scene\Wheels\ and extract MG_Metro6R4_86_wheelLR.modelbin to the new folder you created.</p>
-            <p>3. Copy the name of the wheel you extracted earlier (HAL_Indy_wheelLF), delete the file and rename MG_Metro6R4_86_wheelLR to HAL_Indy_wheelLF.</p>
-            <p>4. Inside the car zip go to \Textures\AO\ and extract MG_Metro6R4_86_wheelLR_AO.swatchbin to where the wheel texture is (FOLDER YOU CREATED\Textures\AO) and repeat step 3 again.</p>
-            <p>5. Create a new .zip called HAL_Indy and put both MG_Metro6R4_86_wheelLR_AO.modelbin + Texture folder inside of it.</p>
-            <p>6. Go to \media\stripped\mediaoverride\rc0 and create new folders that follow the folder structure of the wheels from earlier. So inside rc0 create a folder called cars, inside cars > _library, inside _library > scene and inside scene > wheels. Copy the modified wheel zip into the wheels folder.</p>
-            <h3 style="font-weight: bold;">(If you cant find the texture inside car zip try looking into the texture zips called Textures or Textures_pri_45 in \Cars_library. You should find them in \ao_wheels\swatches\ or \libraryao\wheels\)</h3>
-          </div>
+      <div>
+        <h3 style="font-weight: bold;">Wheelswap Tutorial</h3>
+        <p>1. Go to \media\cars\_library\scene\wheels and choose any wheel you dont want anymore, in this case i use HAL_Indy and extract it to a new folder on your Desktop.</p>
+        <p>2. Choose the car that you want the wheels from which can be found in \media\cars, i picked mg_metro6r4_86. Open the zip, inside the zip go to \scene\_library\Scene\Wheels\ and extract MG_Metro6R4_86_wheelLR.modelbin to the new folder you created.</p>
+        <p>3. Copy the name of the wheel you extracted earlier (HAL_Indy_wheelLF), delete the file and rename MG_Metro6R4_86_wheelLR to HAL_Indy_wheelLF.</p>
+        <p>4. Inside the car zip go to \Textures\AO\ and extract MG_Metro6R4_86_wheelLR_AO.swatchbin to where the wheel texture is (FOLDER YOU CREATED\Textures\AO) and repeat step 3 again.</p>
+        <p>5. Create a new .zip called HAL_Indy and put both MG_Metro6R4_86_wheelLR_AO.modelbin + Texture folder inside of it.</p>
+        <p>6. Go to \media\stripped\mediaoverride\rc0 and create new folders that follow the folder structure of the wheels from earlier. So inside rc0 create a folder called cars, inside cars > _library, inside _library > scene and inside scene > wheels. Copy the modified wheel zip into the wheels folder.</p>
+        <h3 style="font-weight: bold;">(If you cant find the texture inside car zip try looking into the texture zips called Textures or Textures_pri_45 in \Cars_library. You should find them in \ao_wheels\swatches\ or \libraryao\wheels\)</h3>
+      </div>
     </body>
+
     <footer>
-        <div class="footer-icons">
-          <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
-          <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
-          <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
-        </div>
-        </footer>
+            <div class="footer-icons">
+               <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+               <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+               <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+            </div>
+    </footer>
+
 </html>

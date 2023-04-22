@@ -1,201 +1,123 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>XP with 999 Engine</title>
-    <link rel="stylesheet" href="fonts/css/all.css">
-    <script src="fonts/js/all.js"></script>
-    <link rel="shortcut icon" href="fonts/forzamods.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <head>
+        <title>XP With 999 Engine</title>
+        <link rel="stylesheet" href="fonts/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+        <link rel="shortcut icon" href="fonts/forzamods.ico">
+
+        <style>
+            body {
+                color: white;
+                background-color: #44475A;
+                margin: 0;
+                overflow: hidden;
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            }
+
+            footer {
+                color: white;
+                background-color: #333;
+                margin: 0 -7px;
+                text-align: center;
+                width: 100%;
+                bottom: 0;
+                padding: 7px;
+                position: absolute;
+                border-top-right-radius: 50px;
+                border-top-left-radius: 50px;
+            }
+
+            .footer-icons {
+                margin: 0 10px;
+            }
+
+            .fas,
+            .fab {
+                color: white;
+            }
+
+            .button {
+                color: white;
+                background-color: #0088FF;
+                position: absolute;
+                border: none;
+                border-radius: 10px;
+                padding: 10px 12px;
+                font-size: 13px;
+                font-family: 'Open Sans', sans-serif;
+                text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+                margin: 0 10px;
+                text-decoration: none;
+                transition: padding 0.3s ease-in-out, font-size 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            }
+
+            .button-container {
+                position: relative;
+                display: flex;
+                justify-content: center;
+            }
+
+            #mainpage {
+                top: 10px;
+                right: 10px;
+            }
+
+            #video {
+                left: 50%;
+                transform: translateX(-110%);
+            }
+
+            #download {
+                left: 50%;
+                transform: translateX(0%);
+            }
+
+            #mainpage:hover,
+            #video:hover,
+            #download:hover {
+                background-color: #005aa9;
+                padding: 12px 14px;
+                font-size: 14px;
+                transition: padding 0.3s ease-in-out, font-size 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            }
+
+        </style>
     </head>
-    <style>
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: 0 -10px !important;
-  background-color: #333;
-}
-.footer a {
-			color: #fff;
-			margin: 0 10px;
-		}
-.footer-links {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
 
-.footer-links a {
-  display: inline-block;
-}
-
-.footer-links i {
-  font-size: 24px;
-  color: #fff;
-  padding: 5px;
-  margin: 0 10px;
-}
-.footer-icons a {
-  margin: 0 10px !important;
-}
-.footer-links i:hover {
-  color: #bbb;
-  cursor: pointer;
-}
-.fa-discord {
-  color: #fff;
-}
-
-.fa-mug-hot {
-  color: #fff;
-}
-
-.fa-paypal {
-  color: #fff;
-}
-.comeback-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #0074d9;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-    }
-    .settings-image {
-  display: block;
-  margin: auto;
-  width: 80%;
-  height: 80%;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-}
-.image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.image h2 {
-  margin-bottom: 10px;
-}
-
-.image button {
-  padding: 10px 20px;
-  background-color: #0074d9;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.image button:hover {
-  background-color: #004b8d;
-}
-
-.image .details {
-  display: none;
-  margin: 20px 0;
-  text-align: center;
-}
-
-.image .details p {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.image .details a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0074d9;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  text-decoration: none;
-  margin: 20px 0;
-}
-
-.image .details a:hover {
-  background-color: #005299;
-}
-.image {
-    text-align: left;
-    margin: 0 0 20px;
-  }
-  .image h2:not(:first-of-type) {
-    text-align: center;
-  }
-  .details {
-    display: none;
-  }
-  .details.active {
-    display: block;
-  }
-  body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #44475A;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-   color: #f8f8f2;
-}
-a {
-  color: #009dff;
-}
-    </style>
-      <header>
-        <a href="index.html"><button class="comeback-button">Home</button></a>
+    <header>
+        <a href="https://forzamods.github.io/" class="button" id="mainpage">Main page</a>
     </header>
+
     <body>
-        <div style="font-family: 'Open Sans', sans-serif; text-align: center;">
-            <h2 style="font-weight: bold;">XP with 999 Engine</h2>
-            <p>Recommendations: car that has a 7000,9000,15000 xp skillpoint value, works the best</p>
-            <p>You can do this with any car you want</p>
-            <p>You need to have atleast one skillpoint</p>
-            <h2 style="font-weight: bold;">Start of the method</h2>
-            <p>Go to car mastery and wait before unlocking XP</p>
-            <p>Go to 999 engine select type as float, truncated scan option and enter the value of the xp skillpoint</p>
-            <div class="image">
-                <button onclick="showDetails('settings')">Settings you should use</button>
-                <div class="settings details">
-                    <img class="settings-image" src="https://cdn.discordapp.com/attachments/908293057479315456/1088102806726127648/image.png">
-                </div>
-            </div>
-            <h3 style="font-weight: bold;">Getting the XP</h3>
-            <p>You will find around 300-750 (count on top) addresses (if you didnt find that low dont worry), add <code>.000</code> at the end of your value box and hit next scan button 4-5 times.</p>
-            <p>Select all the addresses and exclude the green ones (hold ctrl and click lmb on them) and input your desired XP. (when you dont see green just select all)</p>
-            <p>Go back to game and now unlock XP, and your done. Enjoy!</p>
-            <p><strong>Big thanks and credits for finding this method to: R E S U R R E C T#4233</strong></p>
-            <p><strong><a href="https://cdn.discordapp.com/attachments/1022453919496011776/1088136939875602622/999_Engine.zip" target="_blank">999 Engine</a></strong></p>
-            <p><strong><a href="https://youtu.be/2ALYTy6zBQk" target="_blank">Video Tutorial</a></strong></p>
-            <p><strong><a href="https://www.youtube.com/watch?v=4KJNM0FiE14" target="_blank">999 Engine for idiots</a></strong></p>
-          </div>
+        <h3 style="font-weight: bold;">XP with 999 Engine</h3>
+        <p>‎</p>
+        <p><strong>Recommendations</strong></p>
+        <p>Any car that has the: 7000, 9000, 15000 xp skillpoint, because they get the lowest ammount of addresses</p>
+        <p><strong>Must haves</strong></p>
+        <p>Atleast one skillpoint</p>
+        <p>‎</p>
+        <p><strong>The method itself</strong></p>
+        <p>Go to the car mastery of the car you have chosen</p>
+        <p>In the value box set the value of the xp skillpoint</p>
+        <p>Set scan type to float, truncated and click first scan</p>
+        <p>Add <code>.00</code> at the end of the value box, then hit next scan 2-3 times</p>
+        <p>Select all addresses and change them to whatever you want</p>
+        <p>After changing the value of all addresses you can unlock the skillpoint</p>
+        <a href="https://youtu.be/2ALYTy6zBQk" target="_blank" class="button" id="video"><i class="fab fa-youtube"></i> Video Guide</a>
+        <a href="https://cdn.discordapp.com/attachments/1022453919496011776/1088136939875602622/999_Engine.zip" class="button" id="download"><i class="fas fa-download"></i> 999 Engine</a>
     </body>
-    <script>
-        function showDetails(image) {
-          var details = document.getElementsByClassName(image);
-          for (var i = 0; i < details.length; i++) {
-            var display = details[i].style.display;
-            details[i].style.display = display === "none" || display === "" ? "block" : "none";
-          }
-        }
-          </script>
 
     <footer>
         <div class="footer-icons">
-          <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
-          <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
-          <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
+           <a href="https://discord.gg/forzamods" target="_blank"><i class="fab fa-discord"></i></a>
+           <a href="https://www.buymeacoffee.com/yeethan69" target="_blank"><i class="fas fa-mug-hot"></i></a>
+           <a href="https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN" target="_blank"><i class="fab fa-paypal"></i></a>
         </div>
-        </footer>
+    </footer>
 </html>
