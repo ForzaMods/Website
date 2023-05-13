@@ -47,8 +47,6 @@
                 border-radius: 10px;
                 padding: 10px 12px;
                 font-size: 13px;
-                top: 10px;
-                right: 10px;
                 font-family: 'Open Sans', sans-serif;
                 text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
                 cursor: pointer;
@@ -56,20 +54,40 @@
                 box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
                 transition: padding 0.3s ease-in-out;
             }
+
+            #mainpage {
+                top: 10px;
+                right: 10px;
+            }
+
+            #engine {
+                transform: translateX(-50%);
+            }
     </style>
       <header>
         <a href="https://forzamods.github.io/website" class="button" id="mainpage">Main Page</a>
     </header>
     <body>
         <div>
-            <h1 style="font-weight: bold;">FH5 Reset Rank</h1>
+            <h2 style="font-weight: bold;">FH5 Reset Rank</h2>
+            <h3>AIO Method (works when AIO is up)</h3>
             <p>1. Get total XP value from stat editor.</p>
             <p>2. do 4294967295 minus total XP in a calculator.</p>
             <p>3. halve it, and give yourself that much xp.</p>
             <p>4. add 5 to value you got in #3 and give yourself that amount of xp</p>
             <p>5. you should now be at level 1</p>
-            <h3 style="font-weight: bold;">If not working, first try:</h3>
-            <p>Wait for the complete guide for 999 Engine</p>
+            <h3 style="font-weight: bold;">999 Engine Method</h3>
+            <p><strong>you need to get 3 apollos for this and 2 instances of 999 engine</strong></p>
+            <p>1. set scan type to unknown and scan (while in freeroam) in the first window of 999 engine</p>
+            <p>2. give yourself 6942069 xp in the second window of 999 engine</p>
+            <p>3. set scan type to increased by and in the value box set "6942069" and click next scan in the first window of 999 engine</p>
+            <p>4. add the first address (total xp) that popped up to the table in the first window of 999 engine</p>
+            <p>5. do 4294967295 minus total xp in calculator</p>
+            <p>6a. get in the 2nd apollo</p>
+            <p>6b. halve it, subtract 200 and give yourself that much xp</p>
+            <p>7a. get in the 3rd apollo</p>
+            <p>7b. add 5 to the value you got in step 6b and give yourself that much xp</p>
+            <a href="https://cdn.discordapp.com/attachments/1022453919496011776/1088136939875602622/999_Engine.zip" class="button" id="engine"><i class="fas fa-download"></i> 999 Engine</a>
           </div>
     </body>
     <footer>
