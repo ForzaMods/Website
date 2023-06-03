@@ -86,10 +86,16 @@
               transform: translateX(-50%);
             }
 
+            #downloadscript {
+              margin: 10px 20px 40px -55px;
+              transform: translateY(100%);
+            }
+
             #mainpage:hover,
             #download:hover,
             #video:hover,
-            #gitlist:hover {
+            #gitlist:hover
+            #downloadscript:hover {
                 padding: 12px 14px;
                 box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
                 transition: padding 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -105,19 +111,14 @@
     <body>
         <h3 style="font-weight: bold;">Cars with 999 Engine</h3>
         <p>Go to car collection and select the formula drift viper</p>
-        <p>Open 999 Engine, and select forza</p>
-        <p>Set the search value to 3003 and click first scan</p>
-        <p>Move your mouse around the forza window and comeback to 999 Engine</p>
-        <p>Click next scan 2-3, and select all values except green (dont look for the green if you dont see it)</p>
-        <p>Change all values of the selected addresses to the id of the car you want</p>
-        <p>Now buy the car with y button</p>
-        <p>If your game crashes when changing values try again</p>
-        <h3 style="font-weight: bold;">This part prevents the crash after changing values</h3>
-        <p>Rightclick the selected addresses</p>
-        <p>Click on the third/fourth option (change value to first/last), select first and click ok</p>
+        <p>Open 999 Engine, and select forza and open the script</p>
+        <p>Enable the script and wait until it finds the right address</p>
+        <p>Change the value of "FD Viper address" to the id you want</p>
+        <p>Now buy the viper with y button</p>
         <a href="https://github.com/ForzaMods/999-Engine/releases" target="_blank" class="button" id="download"><i class="fas fa-download"></i> 999 Engine</a>
-        <a href="https://youtu.be/P8H3rhhDlGw" target="_blank" class="button" id="video"><i class="fab fa-youtube"></i> Video Tutorial</a>
+        <a href="https://youtu.be/AiVf63XOQrI" target="_blank" class="button" id="video"><i class="fab fa-youtube"></i> Video Tutorial</a>
         <a href="https://github.com/ForzaMods/fh5idlist" target="_blank" class="button" id="gitlist"><i class="fas fa-car"></i> Series 0-21 car id list</a>
+        <a href="https://github.com/ForzaMods/999-Engine/releases/tag/999enginecars" target="_blank" class="button" id="downloadscript"><i class="fas fa-download"></i>Script download</a>
     </body>
 
     <footer>
