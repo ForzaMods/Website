@@ -1,0 +1,51 @@
+{
+    "projects-items" : {
+        "AIO" : "/aio",
+        "Modelswap Guide" : "/modelswap",
+        "Mod Manager" : "/mod-manager",
+        "Car Table" : "/car-table",
+        "FOV Menu" : "/fov-menu"
+    },
+    "projects-page" : {
+        "0" : {
+            "name" : "AIO",
+            "description" : "Forza Mods AIO is a free Forza Horizon 4 and Forza Horzion 5 mod tool that aims to bring cool, new and unique features, all at NO cost!",
+            "repository" : "AIO",
+            "gamesupport" : "FH4 & FH5",
+            "path" : "/aio"
+        },
+        "1" : {
+            "name" : "Mod Manager",
+            "description" : "The Forza Mods Mod Manager is a tool designed to simplify the installation and management of mods for the popular racing game, Forza Horizon 5.",
+            "repository" : "Mod-Manager",
+            "gamesupport" : "FH5",
+            "path" : "/mod-manager"
+        },
+        "2" : {
+            "name" : "Car Table",
+            "description" : "A convenient tool for unlocking cars in FH5.",
+            "repository" : "Car-Table",
+            "gamesupport" : "FH5",
+            "path" : "/car-table"
+        },
+        "3" : {
+            "name" : "FOV Menu",
+            "description" : "A small tool written in C# to change the limits of fov. Works in FH4 and FH5.",
+            "repository" : "Fov-Menu",
+            "gamesupport" : "FH4 & FH5",
+            "path" : "/fov-menu"
+        }
+    },
+    "support-us" : {
+        "Buy Merik a coffee" : "https://www.buymeacoffee.com/merika",
+        "Buy Ethan a coffee" : "https://www.buymeacoffee.com/Yeethan69",
+        "Donate to Ethan (PayPal)" : "https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN"
+    },
+    "aio-images" : {
+        "0" : "/wgFzLZW.png",
+        "1" : "/82yByFd.png",
+        "2" : "/e1nLmrH.png",
+        "3" : "/DSYU5gP.png"
+    },
+    "base-url" : "https://forzamodsdev.netlify.app"
+}
