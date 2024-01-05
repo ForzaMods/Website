@@ -11,7 +11,7 @@
 const { $anime, $cfg } = useNuxtApp();
 const parsedConfig = useAttrs().config;
 
-const displayImage = `${$cfg()["base-url"]}a_6c6d80f833498984d5ca99725e410c4c.gif`;
+const displayImage = `${$cfg()["base-url"]}9367e432c0.gif`;
 const displayTitle = `Forza Mods${parsedConfig && parsedConfig.name ? ' | ' + parsedConfig.name : ''}`;
 const displayDescription = parsedConfig && parsedConfig.description ? parsedConfig.description : null;
 

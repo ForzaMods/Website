@@ -2,7 +2,7 @@
   <div class="w-full shadow-md shadow-accent fixed flex flex-col lg:inline header z-50" style="opacity: 0;">
     <nav class="adjustSize py-5 flex justify-between items-center transition-all duration-400">
       <div class="font-medium text-2xl">
-        <a href="/"><img class="inline w-8 lg:w-12 rounded-sm" src="/a_6c6d80f833498984d5ca99725e410c4c.gif" alt=""></a>
+        <a href="/"><img class="inline w-8 lg:w-12 rounded-sm" src="/9367e432c0.gif" alt=""></a>
       </div>
       <div class="hidden lg:inline child:header-item items m-0 p-0 ml-1">
         <div class="flex flex-col relative group hover:opacity-100">
@@ -25,7 +25,7 @@
     <div id="mobileMenuWindow" class="mobileMenuWindow absolute w-screen h-screen -translate-x-full lg:-translate-x-0 lg:hidden overflow-y-auto">
       <div class="flex justify-between items-center pb-5 px-16 pt-5 border-b-2 mb-2 border-accent">
         <div class="font-semibold text-2xl">
-          <a href="/"><img class="inline w-8 lg:w-12" src="/a_6c6d80f833498984d5ca99725e410c4c.gif" alt=""></a>
+          <a href="/"><img class="inline w-8 lg:w-12" src="/9367e432c0.gif" alt=""></a>
         </div>
         <div @click="closeMobileMenu">
           <Icon class="w-7 h-7" name="material-symbols:close"></Icon>
