@@ -75,7 +75,6 @@ const team =  [
     role: "Web Developer",
     socialLinks: [
       { href: "https://github.com/d4vss", icon: "mdi:github" },
-      { href: "https://d4vss.net", icon: "pepicons-pop:internet" }
     ]
   },
   {
