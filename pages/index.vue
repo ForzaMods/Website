@@ -24,7 +24,7 @@
           />
         </div>
         <div class="my-20">
-          <a href="/projects" target=_blank class="linkButton">Our projects</a>
+          <a href="/projects" class="linkButton">Our projects</a>
         </div>
       </div>
     </div>
