@@ -6,10 +6,10 @@
           <h1 class="text-4xl lg:text-7xl font-semibold italic underline decoration-primary decoration-4">Forza Mods</h1>
           <p class="text-lg lg:text-2xl font-medium mt-6 px-2 lg:px-20">Forza Mods is the largest community for forza game modifications, which specializes in reverse engineering. It's also the home for the largest forza modding tool, which is the <a href="/aio" class="underline decoration-primary decoration-2 hover:opacity-80 transition">AIO</a>.</p>
         </div>
-        <a href="#explore" class="linkButton mt-[50%] lg:mt-0">Explore</a>
+        <a @click="goTo('explore')" class="linkButton mt-[50%] lg:mt-0">Explore</a>
       </div>
       <div id="explore" class="min-h-[100vh] text-center">
-        <h2 class="text-2xl lg:text-5xl font-semibold italic underline decoration-primary decoration-4 text-center mb-10 pt-[12vh]">Who we are</h2>
+        <h2 class="text-2xl lg:text-5xl font-semibold italic underline decoration-primary decoration-4 text-center mb-10 pt-[11vh]">Who we are</h2>
         <p class="text-md lg:text-xl font-medium text-center">We're Forza Mods - the community that is leading Forza game modifications.</p>
         <h2 class="text-xl lg:text-4xl font-semibold italic underline decoration-primary decoration-4 text-center my-10">The Team</h2>
         <div class="flex flex-wrap justify-center flex-col lg:flex-row gap-10">
@@ -32,6 +32,10 @@
 </template>
 
 <script setup>
+const goTo = (id) => {
+  document.getElementById(id).scrollIntoView();   
+}
+
 const team =  [
   {
     image: "/76bb7b3fdd7107c80f4159b3ee5cbcaa.webp",
