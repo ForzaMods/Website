@@ -27,7 +27,7 @@
 
 <script setup>
 import config from '~/assets/config.json';
-const base = config["projects-page"]["1"];
+const base = config["projects-page"]["2"];
 
 useSeoMeta({
   title: `Forza Mods | ${base.name}`,
