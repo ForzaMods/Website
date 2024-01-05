@@ -49,6 +49,9 @@ onMounted(async () => {
 });
 
 const timeAgo = computed(() => {
+    if (config.repository == "#") {
+        return "Not available."
+    }
     if (payload.value && payload.value.published_at) {
         const publishedAt = new Date(payload.value.published_at);
         return formatDistanceToNow(publishedAt, { addSuffix: true });
@@ -58,6 +61,9 @@ const timeAgo = computed(() => {
 });
 
 const formattedContributors = computed(() => {
+    if (config.repository == "#") {
+        return "Not available."
+    }
   return contributors.value.map(contributor => {
     return `<a class="hover:underline" href="${contributor.html_url}" target="_blank">${contributor.login}</a>`;
   }).join(', ');

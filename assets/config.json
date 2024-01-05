@@ -34,6 +34,13 @@
             "repository" : "Fov-Menu",
             "gamesupport" : "FH4 & FH5",
             "path" : "/fov-menu"
+        },
+        "4" : {
+            "name" : "Modelswap Guide",
+            "description" : "",
+            "repository" : "#",
+            "gamesupport" : "FH4 & FH5",
+            "path" : "/modelswap"
         }
     },
     "support-us" : {
