@@ -44,7 +44,7 @@ const team =  [
     socialLinks: []
   },
   {
-    image: "https://avatars.githubusercontent.com/u/38233332",
+    image: "/97899ffffa.png",
     name: "itsLogic",
     role: "Manager, ex AIO Contributor",
     socialLinks: [
@@ -54,7 +54,7 @@ const team =  [
     ]
   },
   {
-    image: "https://avatars.githubusercontent.com/u/126014478",
+    image: "/73e40d5ce9.jpg",
     name: "szaaamerik",
     role: "AIO and Tool Contributor",
     socialLinks: [
@@ -64,7 +64,7 @@ const team =  [
     ]
   },
   {
-    image: "https://avatars.githubusercontent.com/u/46374629",
+    image: "/1fa7b21bfa.png",
     name: "Yeethan69",
     role: "AIO Contributor",
     socialLinks: [
@@ -74,7 +74,7 @@ const team =  [
     ]
   },
   {
-    image: "https://avatars.githubusercontent.com/u/81194615",
+    image: "/9a556c9bc8.png",
     name: "d4vss",
     role: "Web Developer",
     socialLinks: [
