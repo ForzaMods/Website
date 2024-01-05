@@ -2,8 +2,8 @@
   <Page>
     <div class="content">
         <div class="h-[80vh] flex flex-col justify-center text-center gap-10 items-center">
-            <h1 class="text-4xl lg:text-xl font-semibold italic underline decoration-primary decoration-4">Error {{ error.statusCode }} - {{ error }}</h1>
-            <a @click="handleError()" class="text-md lg:text-lg py-3 px-7 border-2 border-font/50 hover:border-font/80 transition w-fit hover:cursor-pointer">Go back</a>
+            <h1 class="text-4xl lg:text-6xl font-semibold italic underline decoration-primary decoration-4">Error {{ error.statusCode }}</h1>
+            <a @click="handleError()" class="linkButton cursor-pointer">Go back</a>
         </div>
     </div>
   </Page>
@@ -13,5 +13,5 @@
 const props = defineProps({
   error: Object
 })
-const handleError = () => clearError({ redirect: '/' })
+const handleError = () => clearError({}).finally(useRouter().back());
 </script>

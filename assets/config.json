@@ -1,11 +1,5 @@
 {
-    "projects-items" : {
-        "AIO" : "/aio",
-        "Modelswap Guide" : "/modelswap",
-        "Mod Manager" : "/mod-manager",
-        "Car Table" : "/car-table",
-        "FOV Menu" : "/fov-menu"
-    },
+    "base-url" : "https://forzamods.dev/",
     "projects-page" : {
         "0" : {
             "name" : "AIO",
@@ -47,12 +41,5 @@
         "Buy Merik a coffee" : "https://www.buymeacoffee.com/merika",
         "Buy Ethan a coffee" : "https://www.buymeacoffee.com/Yeethan69",
         "Donate to Ethan (PayPal)" : "https://www.paypal.com/donate?hosted_button_id=DACQKRJ4HTZRN"
-    },
-    "aio-images" : {
-        "0" : "/wgFzLZW.png",
-        "1" : "/82yByFd.png",
-        "2" : "/e1nLmrH.png",
-        "3" : "/DSYU5gP.png"
-    },
-    "base-url" : "https://forzamods.netlify.app"
+    }
 }

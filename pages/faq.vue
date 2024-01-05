@@ -1,5 +1,5 @@
 <template>
-  <Page>
+  <Page :config="{ name: 'FAQ', description: 'Got a question? Find your answer here.' }">
     <div class="content">
       <div class="flex min-h-[50vh] flex-col items-center text-center">
         <h1 class="text-4xl lg:text-7xl font-semibold italic underline decoration-primary decoration-4 mb-10">FAQ</h1>
@@ -8,7 +8,7 @@
             <p class="text-lg" v-html="data.question"></p>
             <Icon class="w-7 h-7" name="material-symbols:keyboard-arrow-down-rounded"></Icon>
           </div>
-          <Transition @enter="onEnter" @leave="onLeave">
+          <Transition>
             <div v-if="visibleIndex === index" class="py-4 px-10 w-full bg-accent text-left border-b-8 border-background">
               <p class="text-lg opacity-80 -z-50" v-html="data.answer"></p>
             </div>
@@ -20,20 +20,6 @@
 </template>
 
 <script setup>
-const { $anime } = useNuxtApp();
-import config from '~/assets/config.json';
-
-useSeoMeta({
-  title: `Forza Mods | FAQ`,
-  ogTitle: `Forza Mods | FAQ`,
-  description: "Got a question? Find your answer here.",
-  ogDescription: "Got a question? Find your answer here.",
-  ogImage: `${config["base-url"]}/a_6c6d80f833498984d5ca99725e410c4c.gif`, 
-  twitterCard: `${config["base-url"]}/a_6c6d80f833498984d5ca99725e410c4c.gif`,
-});
-
-// Copy paste
-// <a class='underline' target=_blank href=''></a>
 const questions = [
   { question: "How to saveswap?", answer: "For FH5: <a class='underline' target=_blank href='https://gist.github.com/szaaamerik/ec5a1aa522bed118b33bebbd5433d838'>here</a><br>For FH4: AIO (for MS) or <a class='underline' target=_blank href='https://docs.google.com/document/d/1LdXcqBSg1suraLZeKn2tTNIMd1K3bjCIO69l-eYZgpQ/edit'>here</a>" },
   { question: "What platforms does the AIO support?", answer: "The tool supports the latest versions of both FH4 and FH5." },
@@ -52,28 +38,4 @@ const toggleContent = (number) => {
   if (number == visibleIndex.value) visibleIndex.value = -1;
   else visibleIndex.value = number;
 }
-
-var onEnter; var onLeave;
-// onMounted(() => {
-//   onEnter = (el, done) => {
-//     $anime({
-//       targets: el,
-//       opacity: [0, 1],
-//       height: ['0px', el.scrollHeight + 'px'],
-//       duration: 500,
-//       easing: 'easeInOutQuad',
-//       complete: done,
-//     })
-//   }
-//   onLeave = (el, done) => {
-//     $anime({
-//       targets: el,
-//       opacity: [1, 0],
-//       height: [el.scrollHeight + 'px', '0px'],
-//       duration: 500,
-//       easing: 'easeInOutQuad',
-//       complete: done,
-//     })
-//   }
-// });
 </script>

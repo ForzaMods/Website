@@ -5,13 +5,13 @@
       <div class="flex flex-col lg:flex-row justify-between lg:items-center gap-10 lg:gap-20">
         <div>
           <span class="font-semibold mb-2">Our projects</span>
-          <div class="child:block child:w-fit child:text-font opacity-80 child-hover:underline" v-for="(project_path, project_name) in config['projects-items']">
-            <a :href="project_path">{{ project_name }}</a>
+          <div class="child:block child:w-fit child:text-font opacity-80 child-hover:underline" v-for="project in $cfg()['projects-page']">
+            <a :href="project.path">{{ project.name }}</a>
           </div>
         </div>
         <div>
           <span class="font-semibold mb-2">Support us</span>
-          <div class="child:block child:w-fit child:text-font opacity-80 child-hover:underline" v-for="(donation_link, donation_text) in config['support-us']">
+          <div class="child:block child:w-fit child:text-font opacity-80 child-hover:underline" v-for="(donation_link, donation_text) in $cfg()['support-us']">
             <a target=_blank :href="donation_link">{{ donation_text }}</a>
           </div>
         </div>
@@ -37,8 +37,6 @@
 </template>
 
 <script setup>
-import config from '~/assets/config.json';
-
 var setTheme = null;
 
 const colors = {

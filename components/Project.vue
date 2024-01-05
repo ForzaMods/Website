@@ -21,7 +21,7 @@
                 <span v-else class="font-base">{{ timeAgo }}</span>
             </p>
             </div>
-            <a :href="config.path" class="button w-fit">View project</a>       
+            <a :href="config.path" class="linkButton w-fit">View project</a>       
         </div>
     </div>
 </template>
@@ -44,7 +44,7 @@ onMounted(async () => {
         payload.value = await latestReleaseResponse.json();
         contributors.value = await contributorsResponse.json();
     } finally {
-        isLoading.value = false; // Set isLoading to false once both requests are done
+        isLoading.value = false; 
     }
 });
 
@@ -56,7 +56,7 @@ const timeAgo = computed(() => {
         const publishedAt = new Date(payload.value.published_at);
         return formatDistanceToNow(publishedAt, { addSuffix: true });
     } else {
-        return "Not available."; // or handle the case when published_at is not available
+        return "Not available.";
     }
 });
 

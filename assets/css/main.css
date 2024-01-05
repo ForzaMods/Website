@@ -3,32 +3,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-    --text-color: #f1f1f1;
-    --background-color: #121212;
-    --accent-color: #1d1d1d;
-    --primary-color: #6883ba;
-    --secondary-color: #3d3b8e;
-}
 
 @layer components {
     html {
         @apply scroll-smooth;
     }
     body {
+        --text-color: #f1f1f1;
+        --background-color: #121212;
+        --accent-color: #1d1d1d;
+        --primary-color: #6883ba;
+        --secondary-color: #3d3b8e;
         @apply text-base font-poppins leading-6 font-normal transition overflow-x-hidden;
     }
     body, .header, .mobileMenuWindow {
-        @apply bg-background text-font;
+        @apply bg-background text-font scroll-smooth;
     }
     .page {
         @apply min-h-screen relative;
     }
+
     .header-item {
-        @apply ml-5 transition-all relative inline-block font-medium text-base;
-    }
-    .header-item:hover {
-        @apply text-font opacity-80;
+        @apply ml-5 transition-all relative inline-block font-medium text-base hover:text-font hover:opacity-80;
     }
     .header-item:hover:after {
         @apply opacity-100 -bottom-0.75;
@@ -37,30 +33,13 @@ body {
     .mobile-header-item {
         @apply font-medium text-lg py-1 w-fit;
     }
-
-    .atTop {
-        @apply py-5;
-    }
-    .atScroll {
-        @apply py-2;
-    }
-
     .content {
         @apply pt-32 pb-[36rem] lg:pb-[24rem] adjustSize;
     }
     .adjustSize {
         @apply mx-16 lg:mx-auto lg:max-w-4xl 2xl:max-w-7xl;
     }
-    .department {
-        @apply flex gap-5 flex-col xl:flex-row text-center;
-    }
-    .card {
-        @apply transition w-full h-full py-10 px-4 xl:p-3 shadow-md border-2 border-font text-xl bg-background;
-    }
-    .card:hover {
-        @apply shadow-xl;
-    }
-    .button {
+    .linkButton {
         @apply text-base lg:text-lg py-3 px-6 border-2 border-font opacity-70 hover:opacity-90 transition;
     }
 }
