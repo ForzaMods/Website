@@ -38,13 +38,13 @@ const goTo = (id) => {
 
 const team =  [
   {
-    image: "/76bb7b3fdd7107c80f4159b3ee5cbcaa.webp",
+    image: "/d3fekt.webp",
     name: "d3fekt",
     role: "Server Owner, OG",
     socialLinks: []
   },
   {
-    image: "/97899ffffa.png",
+    image: "/itsLogic.png",
     name: "itsLogic",
     role: "Manager, ex AIO Contributor",
     socialLinks: [
@@ -54,7 +54,7 @@ const team =  [
     ]
   },
   {
-    image: "/73e40d5ce9.jpg",
+    image: "/szaaamerik.jpg",
     name: "szaaamerik",
     role: "AIO and Tool Contributor",
     socialLinks: [
@@ -64,7 +64,7 @@ const team =  [
     ]
   },
   {
-    image: "/1fa7b21bfa.png",
+    image: "/yeethan69.png",
     name: "Yeethan69",
     role: "AIO Contributor",
     socialLinks: [
@@ -74,7 +74,7 @@ const team =  [
     ]
   },
   {
-    image: "/9a556c9bc8.png",
+    image: "/d4vss.png",
     name: "d4vss",
     role: "Web Developer",
     socialLinks: [
@@ -82,7 +82,7 @@ const team =  [
     ]
   },
   {
-    image: "/a_f5c483b6c6aad54f9d7b7475d21f752a.gif",
+    image: "/ariza.gif",
     name: "Δriza",
     role: "Discord Admin",
     socialLinks: [
@@ -90,7 +90,7 @@ const team =  [
     ]
   },
   {
-    image: "/4ebf8cc3c2613ab310117e62f786c089.webp",
+    image: "/jeeb.webp",
     name: "Jeeb",
     role: "Discord Moderator",
     socialLinks: []
