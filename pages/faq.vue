@@ -35,7 +35,6 @@ const questions = [
 
 var visibleIndex = ref(-1);
 const toggleContent = (number) => {
-  if (number == visibleIndex.value) visibleIndex.value = -1;
-  else visibleIndex.value = number;
+  visibleIndex.value = visibleIndex.value === number ? -1 : number;
 }
 </script>
