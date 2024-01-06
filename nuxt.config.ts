@@ -24,8 +24,5 @@ export default defineNuxtConfig({
     head: {
       title: 'Forza Mods',
     },
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ]
   },
 })

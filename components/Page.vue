@@ -24,6 +24,10 @@ useSeoMeta({
   twitterCard: displayImage,
 });
 
+useHead({
+  link: [{ rel: 'icon', type: 'image/ico', href: '/favicon.ico' }],
+})
+
 onMounted(() => {
   $anime({targets: '.page', duration: 100, opacity: [0, 1], easing: 'easeInOutQuad'});
 });
