@@ -41,7 +41,9 @@ const team =  [
     image: "/d3fekt.webp",
     name: "d3fekt",
     role: "Server Owner, OG",
-    socialLinks: []
+    socialLinks: [
+            { href: "https://www.youtube.com/@D3FEKT", icon: "tabler:brand-youtube-filled" }
+    ]
   },
   {
     image: "/itsLogic.png",
