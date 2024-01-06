@@ -19,10 +19,12 @@
     body, .header, .mobileMenuWindow {
         @apply bg-background text-font scroll-smooth;
     }
+    h1 {
+       @apply text-4xl lg:text-7xl font-semibold; 
+    }
     .page {
         @apply min-h-screen relative;
     }
-
     .header-item {
         @apply ml-5 transition-all relative inline-block font-medium text-base hover:text-font hover:opacity-80;
     }

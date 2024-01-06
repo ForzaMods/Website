@@ -2,7 +2,7 @@
   <Page :config="$cfg()['projects-page']['3']">
     <div class="content">
       <div class="flex min-h-[50vh] flex-col lg:justify-around items-center text-center">
-        <h1 class="text-4xl lg:text-7xl font-semibold italic underline decoration-primary decoration-4">{{ $cfg()['projects-page']['3'].name }}</h1>
+        <h1 class="italic underline decoration-primary decoration-4">{{ $cfg()['projects-page']['3'].name }}</h1>
         <div class="flex justify-center items-center my-20 flex-col gap-10">
           <div class="flex flex-col gap-5 text-lg lg:text-xl lg:px-10">
             <h2 class="font-semibold text-3xl">Description:</h2>

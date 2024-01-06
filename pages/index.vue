@@ -3,7 +3,7 @@
     <div class="content">
       <div class="flex h-[90vh] flex-col lg:justify-around items-center text-center">
         <div>
-          <h1 class="text-4xl lg:text-7xl font-semibold italic underline decoration-primary decoration-4">Forza Mods</h1>
+          <h1 class="italic underline decoration-primary decoration-4">Forza Mods</h1>
           <p class="text-lg lg:text-2xl font-medium mt-6 px-2 lg:px-20">Forza Mods is the largest community for forza game modifications, which specializes in reverse engineering. It's also the home for the largest forza modding tool, which is the <a href="/aio" class="underline decoration-primary decoration-2 hover:opacity-80 transition">AIO</a>.</p>
         </div>
         <a @click="goTo('explore')" class="linkButton mt-[50%] lg:mt-0">Explore</a>

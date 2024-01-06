@@ -2,7 +2,7 @@
   <Page :config="$cfg()['projects-page']['4']">
     <div class="content">
       <div class="flex min-h-[50vh] flex-col lg:justify-around items-center text-center">
-        <h1 class="text-4xl lg:text-7xl font-semibold italic underline decoration-primary decoration-4">{{ $cfg()['projects-page']['4'].name }}</h1>
+        <h1 class="italic underline decoration-primary decoration-4">{{ $cfg()['projects-page']['4'].name }}</h1>
         <div class="flex justify-center items-center my-20 flex-col gap-10">
           <img class="rounded-xl lg:rounded-3xl" src="/project-source/fov-menu-preview.png" alt="">
           <div class="flex flex-col gap-5 text-lg lg:text-xl lg:px-10">
