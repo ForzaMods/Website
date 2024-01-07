@@ -42,7 +42,7 @@ var setTheme = null;
 const colors = {
   "light" : {
     "text" : "#000000",
-    "background" : '#ffffff',
+    "background" : '#fcfbfc',
     "accent" : "#dddddd",
     "primary" : "#6883ba",
     "secondary" : "#3d3b8e"

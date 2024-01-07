@@ -33,7 +33,7 @@ const all_questions = {
     { question: "Is anything paid?", answer: "No. We believe mods should be free. If you want to support us, you can take a look at <a class='underline' href='/support-us'>this page</a>." },
   ],
   "AIO" : [
-    { question: "What games does the AIO tool support?", answer: "The tool supports the latest versions of both FH4 and FH5. It works both with the MS (or Xbox App) and the Steam version. FM8 support may be available soon." },
+    { question: "What games does the AIO tool support?", answer: "The tool supports the latest versions of FH4, FH5 and FM8. It works both with the MS (or Xbox App) and the Steam version." },
     { question: "What dependencies do I need for the AIO?", answer: "You just need <a class='underline' target=_blank href='https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-7.0.14-windows-x64-installer'>Dot NET 7.0.14</a>."}
   ],
   "Swapping" : [
