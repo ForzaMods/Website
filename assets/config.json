@@ -3,7 +3,7 @@
     "projects-page" : {
         "0" : {
             "name" : "AIO",
-            "description" : "Forza Mods AIO is a free Forza Horizon 4 and Forza Horzion 5 mod tool that aims to bring cool, new and unique features, all at NO cost!",
+            "description" : "Forza Mods AIO is a free FH4, FH5 and FM8 mod tool that aims to bring cool, new and unique features, all at NO cost!",
             "repository" : "AIO",
             "gamesupport" : "FH4, FH5 & FM8",
             "path" : "/aio"
