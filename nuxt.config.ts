@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@hypernym/nuxt-anime",
     'vue3-carousel-nuxt',
+    '@nuxtjs/supabase',
   ],
   postcss: {
     plugins: {
@@ -25,4 +26,11 @@ export default defineNuxtConfig({
       title: 'Forza Mods',
     },
   },
+  supabase: {
+    redirect: false,
+    redirectOptions: {
+      login: '/login',
+      callback: '/user/me',
+    }
+  }
 })

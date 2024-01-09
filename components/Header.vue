@@ -4,7 +4,7 @@
       <div class="font-medium text-2xl">
         <a href="/"><img class="inline w-8 lg:w-12 rounded-sm" src="/forza-mods-small.gif" alt=""></a>
       </div>
-      <div class="hidden lg:inline child:header-item items m-0 p-0 ml-1">
+      <div class="hidden lg:flex child:header-item items-center items m-0 p-0 ml-1">
         <div class="flex flex-col relative group hover:opacity-100">
           <a href="/projects" class="cursor-pointer transition-all hover:opacity-80">Projects</a>
           <div class="hidden group-hover:block absolute left-0 pt-7">
@@ -13,11 +13,22 @@
             </div>
           </div>
         </div>
-        <a href="https://github.com/ForzaMods">GitHub</a>
-        <a href="/support-us">Support Us</a>
         <a href="/faq">FAQ</a>
+        <a href="/ideas">Ideas</a>
+        <a href="https://github.com/ForzaMods">GitHub</a>
+        <div class="group w-9 h-9 mr-1 !opacity-100">
+          <div v-if="user" @click="toggleProfile">
+            <img class="w-full h-full rounded-full cursor-pointer" :src="user.user_metadata.avatar_url" alt=""> 
+            <div ref="profileMenu" class="absolute top-14 right-0 flex-col bg-accent !hidden">
+              <div class="flex flex-col child:transition child-hover:opacity-80 child:px-4 child:py-2">
+                <a :href="'/user/' + user.user_metadata.full_name">My&nbspProfile</a>
+                <a @click="signOut" class="cursor-pointer transition hover:opacity-80 px-4 py-2">Sign&nbspout</a>
+              </div>
+            </div>
+          </div>
+          <a v-else href="/login"><Icon class="w-full h-full p-1" name="material-symbols:person"></Icon></a>
+        </div>
       </div>
-
       <div class="lg:hidden" @click="openMobileMenu">
         <Icon class="w-7 h-7" name="solar:hamburger-menu-linear"></Icon>
       </div>
@@ -33,6 +44,11 @@
       </div>
       <div class="flex justify-between flex-col h-full px-16 mb-20">
         <div class="flex flex-col child:mobile-header-item">
+          <div v-if="user">
+            <a :href="'/user/' + user.user_metadata.full_name">My&nbspProfile</a>
+            <a @click="signOut" class="cursor-pointer">Sign out</a>
+          </div>
+          <a v-else href="/login">Login</a>
           <div class="flex flex-col relative group">
             <span>
               <a href="/projects" class="cursor-pointer">Projects</a>
@@ -42,9 +58,9 @@
               <a :href="project.path" class="ml-4 mb-2 block">{{ project.name.replaceAll(' ', '&nbsp') }}</a>
             </div>
           </div>
-          <a href="https://github.com/ForzaMods">GitHub</a>
-          <a href="/support-us">Support Us</a>
           <a href="/faq">FAQ</a>
+          <a href="/ideas">Ideas</a>
+          <a href="https://github.com/ForzaMods">GitHub</a>
         </div>
         <div>
         </div>
@@ -54,7 +70,14 @@
 </template>
 
 <script setup>
+const user = useSupabaseUser();
 const { $anime } = useNuxtApp();
+
+const signOut = async () => {
+  toggleProfile();
+  useRouter().push('/');
+  const { error } = await useSupabaseClient().auth.signOut();
+}
 
 onMounted(async () => {
   $anime({ targets: '.header', translateY: [-200, 0], opacity: 1, duration: 800, delay: 100, easing: 'easeOutExpo'});
@@ -96,4 +119,9 @@ onMounted(() => {
     }
   }
 });
+const profileMenu = ref(null);
+const toggleProfile = () => {
+  profileMenu.value.classList.toggle('!hidden');
+  profileMenu.value.classList.toggle('!flex');
+};
 </script>

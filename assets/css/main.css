@@ -22,6 +22,10 @@
     h1 {
        @apply text-4xl lg:text-7xl font-semibold; 
     }
+    select option {
+        @apply font-poppins text-xl;
+        -moz-font-family: "Poppins", "ui-serif";
+    }
     .page {
         @apply min-h-screen relative;
     }

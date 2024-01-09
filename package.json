@@ -12,6 +12,7 @@
   "devDependencies": {
     "@hypernym/nuxt-anime": "^2.1.1",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/supabase": "^1.1.5",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@sidebase/nuxt-session": "^0.2.8",
     "autoprefixer": "^10.4.16",
