@@ -44,7 +44,7 @@
       </div>
       <div class="flex justify-between flex-col h-full px-16 mb-20">
         <div class="flex flex-col child:mobile-header-item">
-          <div v-if="user">
+          <div v-if="user" class="child:block">
             <a :href="'/user/' + user.user_metadata.full_name">My&nbspProfile</a>
             <a @click="signOut" class="cursor-pointer">Sign out</a>
           </div>
