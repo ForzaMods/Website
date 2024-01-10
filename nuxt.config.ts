@@ -26,6 +26,13 @@ export default defineNuxtConfig({
       title: 'Forza Mods',
     },
   },
+  nitro: {
+    esbuild: {
+      options: {
+        target: 'esnext'
+      }
+    }
+  },
   supabase: {
     redirect: false,
     redirectOptions: {
