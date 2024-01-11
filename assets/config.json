@@ -8,13 +8,6 @@
             "gamesupport" : "FH4, FH5 & FM8",
             "path" : "/aio"
         },
-        "1" : {
-            "name" : "Modelswap Guide",
-            "description" : "",
-            "repository" : "#",
-            "gamesupport" : "FH4 & FH5",
-            "path" : "/modelswap"
-        },
         "2" : {
             "name" : "Mod Manager",
             "description" : "The Forza Mods Mod Manager is a tool designed to simplify the installation and management of mods for the popular racing game, Forza Horizon 5.",
