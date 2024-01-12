@@ -6,7 +6,7 @@
         <div class="w-full mb-10" v-for="([topic, questions]) in Object.entries(all_questions)">
           <h2 class="font-semibold text-2xl lg:text-4xl italic underline decoration-primary decoration-4 mb-5 pt-10">{{ topic }}</h2>
           <div class="w-full" v-for="(data, index) in questions" :key="index">
-            <div :id="topic + '-' + index" class="py-4 px-4 lg:px-8 bg-accent flex justify-between items-center cursor-pointer border-b-4 border-primary" @click="toggleContent(topic, index)">
+            <div class="py-4 px-4 lg:px-8 bg-accent flex justify-between items-center cursor-pointer border-b-4 border-primary" @click="toggleContent(topic, index)">
               <p class="text-lg select-none" v-html="data.question"></p>
               <Icon :id="topic + index" class="w-7 h-7 shrink-0" name="material-symbols:keyboard-arrow-down-rounded"></Icon>
             </div>
@@ -36,7 +36,7 @@ const all_questions = {
   "AIO" : [
     { question: "What games does the AIO tool support?", answer: "The tool supports the latest versions of FH4, FH5 and FM8. It works both with the MS (or Xbox App) and the Steam version." },
     { question: "What dependencies do I need for the AIO?", answer: "You just need <a class='underline' target=_blank href='https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-7.0.14-windows-x64-installer'>Dot NET 7.0.14</a>."},
-    { question: "I got a \"Failed\" notification. What should I do?", answer: "Start the AIO tool as administrator." }
+    { question: "I got a \"Failed\" notification. What should I do?", answer: "Restart the game and the AIO. This should fix it." }
   ],
   "Swapping" : [
     { question: "How do I modelswap?", answer: "You can a modelswap guide on our <a class='underline' target=_blank href='/discord'>Discord Server</a>. <span class='line-through'>You can find a modelswap guide <a class='underline' target=_blank href='/modelswap'>here</a>.</span>" },
@@ -67,12 +67,4 @@ const toggleContent = (topic, number) => {
 const isVisible = (topic, questionIndex) => {
   return visibleIndex.value === questionIndex && currentTopic.value === topic;
 }
-
-onMounted(() => {
-  const query = route.query.question;
-  if (query) {
-    const el = document.getElementById(query);
-    el.style.backgroundColor = 'var(--primary-color)';
-  }
-})
 </script>
