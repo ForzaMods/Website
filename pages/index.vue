@@ -80,6 +80,7 @@ const team =  [
     name: "d4vss",
     role: "Web Developer",
     socialLinks: [
+      { href: "https://d4vss.net", icon: "mdi:web"},
       { href: "https://github.com/d4vss", icon: "mdi:github" },
       { href: "https://youtu.be/dQw4w9WgXcQ", icon: "tabler:brand-onlyfans"}
     ]
