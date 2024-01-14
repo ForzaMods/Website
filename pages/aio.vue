@@ -16,7 +16,7 @@
             </Slide>
 
             <template #addons>
-              <Pagination />
+              <Pagination/>
             </template>
           </Carousel>
         </div>
@@ -29,3 +29,10 @@
     </div>
   </Page>
 </template>
+
+<style>
+:root {
+  --vc-clr-primary: #6883ba;
+  --vc-clr-secondary: #3d3b8e;
+}
+</style>

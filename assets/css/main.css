@@ -14,6 +14,7 @@
         --accent-color: #1d1d1d;
         --primary-color: #6883ba;
         --secondary-color: #3d3b8e;
+        
         @apply text-base font-poppins leading-6 font-normal transition overflow-x-hidden;
     }
     body, .header, .mobileMenuWindow {
