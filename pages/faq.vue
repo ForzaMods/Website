@@ -24,7 +24,6 @@
 
 <script setup>
 const { $anime } = useNuxtApp();
-const route = useRoute();
 
 const all_questions = {
   "General" : [

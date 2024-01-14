@@ -10,10 +10,14 @@
             <h2 class="font-semibold text-3xl">Features:</h2>
             <p>If you want to get a list of all features, planned features and requested features, just look at our <a class="underline" target=_blank href="https://trello.com/b/jXY01dbN/forza-mods-aio">Trello</a>.</p>
           </div>
-          <Carousel :autoplay="3000" :wrap-around="false" :mouse-drag="false" :touch-drag="false" :loop="true">
+          <Carousel :autoplay="3000" :wrap-around="false" :loop="true">
             <Slide v-for="slide in ['/aio-1.png', '/aio-2.png', '/aio-3.png', '/aio-4.png']" :key="slide">
               <div><img class="rounded-xl lg:rounded-3xl" :src="'/project-source' + slide" alt=""></div>
             </Slide>
+
+            <template #addons>
+              <Pagination />
+            </template>
           </Carousel>
         </div>
         <div class="flex gap-5 flex-col lg:flex-row mb-8">
