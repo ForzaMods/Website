@@ -1,32 +1,33 @@
 {
-  "name": "nuxt-app",
+  "name": "forzamods.dev",
+  "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@hypernym/nuxt-anime": "^2.1.1",
-    "@nuxt/devtools": "latest",
-    "@nuxtjs/supabase": "^1.1.5",
-    "@nuxtjs/tailwindcss": "^6.10.1",
-    "@sidebase/nuxt-session": "^0.2.8",
-    "autoprefixer": "^10.4.16",
-    "nuxt": "^3.8.2",
-    "nuxt-icon": "^0.6.6",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
-    "vue": "^3.3.8",
-    "vue-router": "^4.2.5",
-    "vue3-carousel-nuxt": "^1.1.0"
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start -p 6069",
+    "lint": "next lint"
   },
   "dependencies": {
-    "argon2": "^0.31.2",
-    "date-fns": "^3.0.6",
-    "octokit": "^3.1.2"
+    "axios": "^1.6.8",
+    "framer-motion": "^11.0.24",
+    "next": "14.1.4",
+    "next-sitemap": "^4.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "sharp": "^0.33.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "daisyui": "^4.9.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }
