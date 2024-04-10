@@ -15,6 +15,7 @@
 
 # production
 /build
+/.nuxt
 
 # misc
 .DS_Store
