@@ -1,19 +1,27 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://forzamods.dev'),
+const MDD = {
   title: "FAQ - Forza Mods - The Forza Modding Community",
-  description: "Forza Mods is developing tools for Forza Horizon 4 and Forza Horizon 5 that are open source and free.",
+  description: "A Frequently asked questions page where most questions get answered.",
+  openGraphDescription: null,
+  base: "https://forzamods.dev",
+  image: null || '',
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(MDD.base || 'https://d4vss.net'),
+  title: MDD.title,
+  description: MDD.description,
   openGraph: {
-    title: "Forza Mods - The Forza Modding Community",
-    description:
-      "Largest Forza Modding community in the world creating user-requested open source and free tools.",
+    title: MDD.title,
+    description: MDD.openGraphDescription || MDD.description,
+    images: [MDD.image],
   },
   twitter: {
-    title: "Forza Mods - The Forza Modding Community",
-    description:
-      "Largest Forza Modding community in the world creating user-requested open source and free tools.",
-    creator: "https://d4vss.net"
+    title: MDD.title,
+    description: MDD.openGraphDescription || MDD.description,
+    images: [MDD.image],
+    creator: "https://d4vss.net",
   },
 };
 
@@ -59,10 +67,6 @@ const arr = [
         question: "What dependencies do I need for the AIO?",
         answer:
           "You just need <a class='underline' target=_blank href='https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-7.0.14-windows-x64-installer'>Dot NET 7.0.14</a>.",
-      },
-      {
-        question: 'I got a "Failed" notification. What should I do?',
-        answer: "Restart the game and the AIO tool. This should fix it.",
       },
     ],
   },

@@ -1,14 +1,19 @@
 "use client"
 
-import { FormEvent, useState } from "react"
+import { FormEvent, useState } from "react";
 import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
-export default function ClientContent() {
+export default function ClientIdeas() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [isSent, setIsSent] = useState<boolean>(false);
+
+  const params = useSearchParams();
+  if (params.get("v") === null) window.location.replace('/ideas?v=1');
+  
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -86,7 +91,7 @@ export default function ClientContent() {
             <textarea
               disabled={isLoading}
               required
-              minLength={25}
+              minLength={20}
               maxLength={200}
               rows={8}
               name="description"
@@ -125,12 +130,11 @@ export default function ClientContent() {
             </select>
           </label>
 
-          <div className="flex items-center flex-col gap-4">
+          <div className="flex items-center flex-col">
             <div
               className="cf-turnstile"
               data-sitekey={process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
             />
-            <p>Can&apos;t see the verification box? Click <a onClick={() => window.location.reload()} className="cursor-pointer underline">here</a>!</p>
           </div>
           {!isLoading ? <input type="submit" value="Submit" className="btn mt-4" /> : 
           <span className="btn cursor-not-allowed no-animation">
@@ -140,6 +144,7 @@ export default function ClientContent() {
           {error && <div className="text-error text-center">{error}</div>}
         </form>
       </div>
+
       <div className={`${"my-10 text-center flex flex-col gap-10 items-center min-h-[calc(100vh-34.5rem)]"} ${!isSent ? "hidden" : ""}`}>
         <h2 className="text-2xl font-bold mt-5">Your idea was successfully sent.</h2>
         <Link className="btn w-fit" href="/">Return to Homepage</Link>

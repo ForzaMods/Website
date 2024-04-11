@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ClientContent from "./content";
+import ClientIdeas from "@/components/ideas";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://forzamods.dev'),
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function Ideas() {
   return (
     <main>
-      <ClientContent />
+      <ClientIdeas />
     </main>
   )
 }

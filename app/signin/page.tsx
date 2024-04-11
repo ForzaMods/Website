@@ -2,19 +2,28 @@ import Link from "next/link";
 
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://forzamods.dev'),
+const MDD = {
   title: "Sign In | Forza Mods - The Forza Modding Community",
   description: "Sign in and download mods for Forza Games. Select from a variety of different mods, upload your own and share.",
+  openGraphDescription: null,
+  base: "https://forzamods.dev",
+  image: null || '',
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(MDD.base || 'https://d4vss.net'),
+  title: MDD.title,
+  description: MDD.description,
   openGraph: {
-    title: "Sign In | Forza Mods - The Forza Modding Community",
-    description: "Sign in and download mods for Forza Games. Select from a variety of different mods, upload your own and share.",
+    title: MDD.title,
+    description: MDD.openGraphDescription || MDD.description,
+    images: [MDD.image],
   },
   twitter: {
-    title: "Sign In | Forza Mods - The Forza Modding Community",
-    description:
-      "Sign in and download mods for Forza Games. Select from a variety of different mods, upload your own and share.",
-    creator: "https://d4vss.net"
+    title: MDD.title,
+    description: MDD.openGraphDescription || MDD.description,
+    images: [MDD.image],
+    creator: "https://d4vss.net",
   },
 };
 

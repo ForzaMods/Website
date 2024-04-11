@@ -97,26 +97,34 @@ const tools = [
     ],
   },
 ];
- 
+
 export async function generateMetadata(
   { params }: { params: { name: string } },
 ): Promise<Metadata> {
   const tool = tools.find((tool) => tool.path === `/${params.name}`);
- 
-  return {
-    metadataBase: new URL('https://forzamods.dev'),
+
+  const MDD = {
     title: `${tool?.name} | Forza Mods - The Forza Modding Community`,
     description: tool?.short_description,
+    openGraphDescription: null,
+    base: "https://forzamods.dev",
+    image: tool?.images[0] || '',
+  };
+ 
+  return {
+    metadataBase: new URL(MDD.base || 'https://d4vss.net'),
+    title: MDD.title,
+    description: MDD.description,
     openGraph: {
-      title: `${tool?.name} | Forza Mods - The Forza Modding Community`,
-      description: tool?.short_description,
-      images: tool?.images[0] || '',
+      title: MDD.title,
+      description: MDD.openGraphDescription || MDD.description,
+      images: [MDD.image],
     },
     twitter: {
-      title: `${tool?.name} | Forza Mods - The Forza Modding Community`,
-      description: tool?.short_description,
-      images: tool?.images[0] || '',
-      creator: "https://d4vss.net"
+      title: MDD.title,
+      description: MDD.openGraphDescription || MDD.description,
+      images: [MDD.image],
+      creator: "https://d4vss.net",
     },
   }
 }

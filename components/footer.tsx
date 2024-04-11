@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Header() { 
+export default function Footer() { 
   return (
     <footer>
           <div className="footer p-10 px-12 lg:px-20 border-t border-base-300 text-base-content">

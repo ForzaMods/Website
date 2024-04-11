@@ -3,6 +3,16 @@
 import { useState } from "react";
 import Mod from "./mod";
 
+const dt = {
+  data: {
+    id: 2,
+  title: "2008 BMW M3 E92 DOUBLE TURBO",
+  shortDescription: "Features: Formula Drift M2 Engine and Engine Bay Twin Turbos Carbon front grille Removed ...",
+  tags: ["Car Mod", "Sound Mod", "Wheel/Tire Mod", "ss"],
+  imageUrl: "https://cdn.forzamods.dev/images/335886-2.webp"
+  }
+}
+
 export default function ClientContent() {
   const [currPage, setCurrPage] = useState(1);
   const [maxPages, setMaxPages] = useState(1);
@@ -93,7 +103,7 @@ export default function ClientContent() {
 
       <div className="flex justify-center flex-wrap gap-x-20 gap-y-5 md:gap-y-10 md:mx-20 my-10">
         {array.map((_, index) => (
-          <Mod key={index} />
+          <Mod key={index} data={dt} />
         ))}
       </div>
 
