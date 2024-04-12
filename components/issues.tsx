@@ -153,8 +153,8 @@ export default function Issues() {
   return (
     <div className="max-w-4xl text-left">
       {issues.map((qi, index) => (
-        <div onClick={() => {changeIndexTo(index) }}>
-          <Issue key={index} data={{index, qi, currentSelected}} />
+        <div key={index} onClick={() => {changeIndexTo(index) }}>
+          <Issue data={{index, qi, currentSelected}} />
         </div>
       ))}
     </div>
