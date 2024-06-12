@@ -1,63 +1,65 @@
-import Link from "next/link";
 import Counter from "@/components/counter";
-import type { Metadata } from "next";
+import { Button, Heading, Section, Text } from "@radix-ui/themes";
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://forzamods.dev'),
+const MDD = {
   title: "Forza Mods - The Forza Modding Community",
   description: "Forza Mods is developing tools for Forza Horizon 4 and Forza Horizon 5 that are open source and free.",
+  openGraphDescription: "Largest Forza Modding community in the world creating user-requested open source and free tools.",
+  base: "https://forzamods.dev",
+  image: "/twitter-card.png",
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(MDD.base || 'https://d4vss.net'),
+  title: MDD.title,
+  description: MDD.description,
   openGraph: {
-    title: "Forza Mods - The Forza Modding Community",
-    description:
-      "Largest Forza Modding community in the world creating user-requested open source and free tools.",
-    images: "/twitter-card.png",
+    title: MDD.title,
+    description: MDD.openGraphDescription || MDD.description,
+    images: [MDD.image],
   },
   twitter: {
-    title: "Forza Mods - The Forza Modding Community",
-    description:
-      "Largest Forza Modding community in the world creating user-requested open source and free tools.",
-    images: "/twitter-card.png",
-    creator: "https://d4vss.net"
+    title: MDD.title,
+    description: MDD.openGraphDescription || MDD.description,
+    images: [MDD.image],
+    creator: "https://d4vss.net",
   },
 };
 
 export default function Home() {
   return (
-    <main className="p-10">
-      <div className="hero min-h-[calc(100vh-24rem)]">
-        <div className="hero-content text-center">
-          <div className="max-w-lg">
-            <h1 className="text-5xl font-extrabold">Forza Mods</h1>
-            <p className="py-6">
-              Forza Mods is developing tools for Forza Horizon 4 and Forza
-              Horizon 5. Explore a new dimension of customization and
-              exhilarating gameplay with us.
-            </p>
-            <Link className="btn btn-secondary" href="/tools/aio">Start modding</Link>
+    <main>
+      <Section className="flex flex-col justify-center items-center gap-10 md:gap-48 min-h-[calc(100vh-25rem)]">
+        <div className="flex flex-col justify-center items-center gap-10">
+          <Image priority className="flex-shrink-0" src="/forzamods-rect.webp" alt="Forza Mods Logo White Rectangle" draggable="false" width={350} height={0} />
+          <Text className="mx-auto px-8 max-w-xl text-center">
+            Forza Mods is developing tools for Forza Horizon 4 and Forza Horizon 5. Explore a new dimension of customization and exhilarating gameplay with us.
+          </Text>
+          <Button variant="soft" radius="small" size="2" asChild>
+            <Link href="/tools/aio">Start modding</Link>
+          </Button>
+        </div>
+        <div className="flex max-md:flex-col gap-x-16 gap-y-10">
+          <div className="text-center">
+            <Text size="2" color="gray">AIO Downloads</Text>
+            <Heading size="8" as="h3" weight="bold"><Counter from={0} to={784} />K+</Heading>
+            <Text size="2" color="gray">A trusted source by many</Text>
+          </div>
+          <div className="text-center">
+            <Text size="2" color="gray">GitHub Stars</Text>
+            <Heading size="8" as="h3" weight="bold"><Counter from={0} to={720} />+</Heading>
+            <Text size="2" color="gray">That is many stars</Text>
+          </div>
+          <div className="text-center">
+            <Text size="2" color="gray">Discord Members</Text>
+            <Heading size="8" as="h3" weight="bold"><Counter from={0} to={69} />K+</Heading>
+            <Text size="2" color="gray">A growing community</Text>
           </div>
         </div>
-      </div>
-      <div className="text-center mb-20">
-        <div className="stats stats-vertical lg:stats-horizontal shadow">
-          <div className="stat">
-            <div className="stat-title">AIO Downloads</div>
-            <div className="stat-value"><Counter from={0} to={640} />K+</div>
-            <div className="stat-desc">A trusted source by many</div>
-          </div>
-
-          <div className="stat">
-            <div className="stat-title">GitHub Stars</div>
-            <div className="stat-value"><Counter from={0} to={500} />+</div>
-            <div className="stat-desc">That is many stars</div>
-          </div>
-
-          <div className="stat">
-            <div className="stat-title">Discord Members</div>
-            <div className="stat-value"><Counter from={0} to={60} />K+</div>
-            <div className="stat-desc">A growing community</div>
-          </div>
-        </div>
-      </div>
+      </Section>
     </main>
   );
 }

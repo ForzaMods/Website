@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Davs-s-workspace-elc42b.eu-central-1.xata.sh/db/forzamods-website",
+  "codegen": {
+    "output": "xata.ts"
+  }
+}

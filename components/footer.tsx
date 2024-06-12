@@ -1,74 +1,72 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Heading, Text } from '@radix-ui/themes';
 
-export default function Footer() { 
+const footer = {
+  tools: [
+    { href: "/tools/aio", name: "Forza Mods AIO" },
+    { href: "/tools/mod-manager", name: "Mod Manager" },
+    { href: "/tools/fov-menu", name: "FOV Menu" },
+    { href: "/tools/car-table", name: "Car Table" }
+  ],
+  miscellaneous: [
+    { href: "/mods", name: "Mod Browser" },
+    { href: "/faq", name: "FAQ & Troubleshooting" },
+    { href: "/ideas", name: "Submit an idea" }
+  ],
+  external: [
+    { href: "https://status.forzamods.dev", name: "Status", target: "_blank" },
+    { href: "https://github.com/ForzaMods", name: "GitHub", target: "_blank" },
+    { href: "https://discord.gg/forzamods", name: "Discord Server", target: "_blank" },
+    { href: "https://github.com/szaaamerik", name: "Support Us", target: "_blank" }
+  ]
+};
+
+export default function Footer() {
+  const { tools, miscellaneous, external } = footer;
+
+  const renderLinks = (links: { href: string, name: string, target?: string, }[]) =>
+    links.map((link, index) => (
+      <Text key={index} size="1" asChild>
+        <Link href={link.href} target={link.target || "_self"} className="hover:underline w-fit">{link.name}</Link>
+      </Text>
+    ));
+
   return (
-    <footer>
-          <div className="footer p-10 px-12 lg:px-20 border-t border-base-300 text-base-content">
-            <nav>
-              <h6 className="footer-title">Tools</h6>
-              <Link className="link link-hover" href="/tools/aio">Forza Mods AIO</Link>
-              <Link className="link link-hover" href="/tools/mod-manager">Mod Manager</Link>
-              <Link className="link link-hover" href="/tools/fov-menu">FOV Menu</Link>
-              <Link className="link link-hover" href="/tools/car-table">Car Table</Link>
-            </nav>
-            <nav>
-              <h6 className="footer-title">Miscellaneous</h6>
-              <Link className="link link-hover" href="/mods">Mod Browser</Link>
-              <Link className="link link-hover" href="/faq">FAQ</Link>
-              <Link className="link link-hover" href="/troubleshooting">Troubleshooting</Link>
-              <Link className="link link-hover" href="/ideas">Ideas</Link>
-            </nav>
-            <nav>
-              <h6 className="footer-title">External</h6>
-              <Link
-                className="link link-hover"
-                href="https://status.forzamods.dev"
-                target="_blank"
-              >
-                Status
-              </Link>
-              <Link
-                className="link link-hover"
-                href="https://github.com/ForzaMods"
-                target="_blank"
-              >
-                GitHub
-              </Link>
-              <Link
-                className="link link-hover"
-                href="https://discord.gg/forzamods"
-                target="_blank"
-              >
-                Discord Server
-              </Link>
-              <Link
-                className="link link-hover"
-                href="https://ko-fi.com/merikaaaaa"
-                target="_blank"
-              >
-                Ko-fi
-              </Link>
-            </nav>
+    <footer className="border-t border-[var(--accent-8)]">
+      <div className="flex flex-col gap-10 md:grid grid-cols-3 mx-auto p-10 px-12 lg:px-20 ">
+        <nav className="flex flex-col gap-1">
+          <Heading as="h4" size="3" weight="bold" color="gray" className="footer-title">Tools</Heading>
+          <div className="flex flex-col gap-2">
+            {renderLinks(tools)}
           </div>
-          <div className="footer px-12 lg:px-20 py-6 border-t border-base-300 bg-base-200 text-base-content">
-            <aside className="items-center grid-flow-col">
-              <Image
-                src="/forzamods.png"
-                alt="Forza Mods Logo"
-                width={48}
-                height={48}
-              />
-              <p>
-                Forza Mods by{" "}
-                <Link className="link link-hover" href="https://d4vss.net" target="_blank">
-                  Davsツ
-                </Link>
-                <br />
-                Effortless Forza Modding Made Simple!
-              </p>
-            </aside>
+        </nav>
+        <nav className="flex flex-col gap-1">
+        <Heading as="h4" size="3" weight="bold" color="gray" className="footer-title">Miscellaneous</Heading>
+          <div className="flex flex-col gap-2">
+            {renderLinks(miscellaneous)}
           </div>
-        </footer>
-  )
-}
+        </nav>
+        <nav className="flex flex-col gap-1">
+        <Heading as="h4" size="3" weight="bold" color="gray" className="footer-title">External</Heading>
+          <div className="flex flex-col gap-2">
+            {renderLinks(external)}
+          </div>
+        </nav>
+      </div>
+      <div className="flex flex-row px-12 lg:px-20 py-6 border-t border-[var(--accent-8)] bg-[var(--accent-2)]">
+        <aside className="flex gap-2">
+          <Image src="/forzamods-square.webp" alt="Forza Mods Logo" width={48} height={48} />
+          <div>
+          <Text size="1">
+            Forza Mods by <Link className="hover:underline" href="https://d4vss.net" target="_blank">Davsツ</Link>
+          </Text>
+          <Text size="1" className="block">
+          Effortless Forza Modding Made Simple! 
+          </Text>
+          </div>
+        </aside>
+      </div>
+    </footer>
+  );
+};

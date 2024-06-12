@@ -14,19 +14,19 @@ _Browse and share mods for Forza Horizon 5._
 
 <div align="center">
 
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![DaisyUI](https://img.shields.io/badge/daisyui-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white)
+![Next JS](https://img.shields.io/badge/Next_JS-black?style=for-the-badge&logo=next.js&logoColor=white) ![RadixUI](https://img.shields.io/badge/radix_ui-5A0EF8?style=for-the-badge&logo=radixui&logoColor=white)
 
 </div>
 
 # ✨ Features
 
-- User Profiles
+- Easy Auth with Discord OAuth
+- Tools overview
+- FAQ & Troubleshooting
 - Mod Browser
-- Downloading and uploading mods
-- Submitting ideas
+- Submitting ideas to us
 
 # 🔧 Credits
 
-- Web Frontend and Backend: [d4vss](https://github.com/d4vss)
-- Images: [szaaamerik](https://github.com/szaaamerik)
-- Troubleshooting documentation: [Veki28](https://github.com/Veki28)
+- Website Developer: [d4vss](https://github.com/d4vss)
+- FAQ & Troubleshooting: [Veki28](https://github.com/Veki28)

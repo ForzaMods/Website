@@ -1,0 +1,371 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown-body {
+  @apply text-base leading-6 text-neutral-200 font-sans;
+}
+
+.markdown-body .octicon {
+  @apply inline-block fill-current align-text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  @apply w-4 h-4 inline-block bg-current;
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  @apply block;
+}
+
+.markdown-body summary {
+  @apply list-item;
+}
+
+.markdown-body [hidden] {
+  @apply hidden !important;
+}
+
+.markdown-body a {
+  @apply bg-transparent text-accent-fg no-underline;
+}
+
+.markdown-body abbr[title] {
+  @apply border-b-0 underline decoration-dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  @apply font-semibold;
+}
+
+.markdown-body dfn {
+  @apply italic;
+}
+
+.markdown-body h1 {
+  @apply my-4 font-semibold pb-1 text-2xl border-b border-fg-muted;
+}
+
+.markdown-body mark {
+  @apply bg-attention-subtle text-neutral-200;
+}
+
+.markdown-body small {
+  @apply text-sm;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  @apply text-xs leading-none align-baseline;
+}
+
+.markdown-body sub {
+  @apply align-baseline bottom-[-0.25em];
+}
+
+.markdown-body sup {
+  @apply align-baseline top-[-0.5em];
+}
+
+.markdown-body img {
+  @apply border-0 max-w-full box-content bg-black;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  @apply font-mono text-sm;
+}
+
+.markdown-body figure {
+  @apply my-4 mx-10;
+}
+
+.markdown-body hr {
+  @apply box-content overflow-hidden bg-transparent border-b border-fg-muted h-1 my-6 p-0 bg-border-default;
+}
+
+.markdown-body input {
+  @apply m-0 overflow-visible;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  @apply appearance-auto;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  @apply box-border p-0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  @apply h-auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  @apply appearance-none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  @apply text-neutral-500 opacity-50;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  @apply appearance-auto;
+}
+
+.markdown-body a:hover {
+  @apply underline;
+}
+
+.markdown-body ::placeholder {
+  @apply opacity-100;
+}
+
+.markdown-body hr::before {
+  @apply table content-none;
+}
+
+.markdown-body hr::after {
+  @apply table clear-both content-none;
+}
+
+.markdown-body table {
+  @apply border-spacing-0 border-collapse block w-max max-w-full overflow-auto;
+}
+
+.markdown-body td,
+.markdown-body th {
+  @apply p-0;
+}
+
+.markdown-body details summary {
+  @apply cursor-pointer;
+}
+
+.markdown-body details:not([open])>*:not(summary) {
+  @apply hidden !important;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  @apply outline outline-2 outline-offset-[-2px] outline-accent-fg shadow-none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  @apply outline-transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  @apply outline outline-2 outline-offset-[-2px] outline-accent-fg shadow-none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  @apply outline-offset-0;
+}
+
+.markdown-body kbd {
+  @apply inline-block p-[3px] px-[5px] font-mono text-xs leading-[10px] text-neutral-200 align-middle bg-neutral-800 border border-neutral-500 rounded shadow-inner;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  @apply mt-6 mb-4 font-semibold leading-[1.25];
+}
+
+.markdown-body h2 {
+  @apply font-semibold pb-1 text-xl border-b border-fg-muted;
+}
+
+.markdown-body h3 {
+  @apply font-semibold text-lg;
+}
+
+.markdown-body h4 {
+  @apply font-semibold text-base;
+}
+
+.markdown-body h5 {
+  @apply font-semibold text-sm;
+}
+
+.markdown-body h6 {
+  @apply font-semibold text-xs text-fg-muted;
+}
+
+.markdown-body p {
+  @apply mt-0 mb-2.5;
+}
+
+.markdown-body blockquote {
+  @apply m-0 py-0 px-4 text-fg-muted border-l-4 border-fg-default;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  @apply mt-0 mb-0 pl-8;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  @apply list-[lower-roman];
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  @apply list-[lower-alpha];
+}
+
+.markdown-body dd {
+  @apply ml-0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  @apply font-mono text-xs;
+}
+
+.markdown-body pre {
+  @apply mt-0 mb-0 font-mono text-xs break-words;
+}
+
+.markdown-body .octicon {
+  @apply inline-block overflow-visible align-text-bottom fill-current;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  @apply m-0 appearance-none;
+}
+
+.markdown-body::before {
+  @apply table content-none;
+}
+
+.markdown-body::after {
+  @apply table clear-both content-none;
+}
+
+.markdown-body>*:first-child {
+  @apply mt-0 !important;
+}
+
+.markdown-body>*:last-child {
+  @apply mb-0 !important;
+}
+
+.markdown-body a:not([href]) {
+  @apply text-inherit no-underline;
+}
+
+.markdown-body .absent {
+  @apply text-danger-fg;
+}
+
+.markdown-body .anchor {
+  @apply float-left pr-1.5 -ml-5 leading-none;
+}
+
+.markdown-body .anchor:focus {
+  @apply outline-none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  @apply my-6;
+}
+
+.markdown-body hr {
+  @apply h-1 my-6 p-0 bg-transparent border-b border-fg-muted;
+}
+
+.markdown-body h2 {
+  @apply text-xl font-semibold pb-1 border-b border-fg-muted;
+}
+
+.markdown-body h3 {
+  @apply text-lg font-semibold;
+}
+
+.markdown-body h4 {
+  @apply text-base font-semibold;
+}
+
+.markdown-body h5 {
+  @apply text-sm font-semibold;
+}
+
+.markdown-body h6 {
+  @apply text-xs font-semibold text-fg-muted;
+}
+
+.markdown-body blockquote {
+  @apply m-0 py-0 px-4 text-fg-muted border-l-4 border-fg-default;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  @apply mt-0 mb-0 pl-8;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  @apply list-[lower-roman];
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  @apply list-[lower-alpha];
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  @apply mt-0 mb-0 font-mono text-xs break-words;
+}
