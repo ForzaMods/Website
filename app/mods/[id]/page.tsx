@@ -1,8 +1,9 @@
+import "@/styles/markdown.css";
+
 import { getXataClient } from "@/xata";
 import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import StringMarkdown from "@/components/string-md";
 import { Button } from "@radix-ui/themes";
 

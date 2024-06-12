@@ -34,7 +34,7 @@ export default function Home() {
     <main>
       <Section className="flex flex-col justify-center items-center gap-10 md:gap-48 min-h-[calc(100vh-25rem)]">
         <div className="flex flex-col justify-center items-center gap-10">
-          <Image priority className="flex-shrink-0" src="/forzamods-rect.webp" alt="Forza Mods Logo White Rectangle" draggable="false" width={350} height={0} />
+          <Image quality={45} priority className="flex-shrink-0" src="/forzamods-rect.webp" alt="Forza Mods Logo White Rectangle" draggable="false" width={350} height={0} />
           <Text className="mx-auto px-8 max-w-xl text-center">
             Forza Mods is developing tools for Forza Horizon 4 and Forza Horizon 5. Explore a new dimension of customization and exhilarating gameplay with us.
           </Text>
