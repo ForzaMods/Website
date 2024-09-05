@@ -45,17 +45,17 @@ export default function Home() {
         <div className="flex max-md:flex-col gap-x-16 gap-y-10">
           <div className="text-center">
             <Text size="2" color="gray">AIO Downloads</Text>
-            <Heading size="8" as="h3" weight="bold"><Counter from={0} to={921} />K+</Heading>
+            <Heading size="8" as="h3" weight="bold"><Counter from={0} to={1} />M+</Heading>
             <Text size="2" color="gray">A trusted source by many</Text>
           </div>
           <div className="text-center">
             <Text size="2" color="gray">GitHub Stars</Text>
-            <Heading size="8" as="h3" weight="bold"><Counter from={0} to={837} />+</Heading>
+            <Heading size="8" as="h3" weight="bold"><Counter from={0} to={900} />+</Heading>
             <Text size="2" color="gray">That is many stars</Text>
           </div>
           <div className="text-center">
             <Text size="2" color="gray">Discord Members</Text>
-            <Heading size="8" as="h3" weight="bold"><Counter from={0} to={76} />K+</Heading>
+            <Heading size="8" as="h3" weight="bold"><Counter from={0} to={80} />K+</Heading>
             <Text size="2" color="gray">A growing community</Text>
           </div>
         </div>

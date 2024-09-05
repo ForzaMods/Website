@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/tailwind.css";
 import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
+import { Button, Heading, Text, Theme } from "@radix-ui/themes";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -54,6 +54,18 @@ export default function RootLayout({
           <main className="flex-grow">
             {children}
           </main>
+          <div className="flex flex-col items-center">
+            <div className="bg-accent-6 w-full px-3 py-5 flex items-center flex-col">
+              <Heading as="h3" size="5">ZAP-Hosting</Heading>
+              <Text size="2" className="max-w-xl text-center my-4">Set up your server in under 5 minutes using ZAP-Hosting! Run your favorite gamemode, create your own scripts, and get creative!</Text>
+              <Button asChild>
+                <a href="https://zap-hosting.com/forzamods" target="_blank">Get your new server</a>
+              </Button>
+              <Text size="2" className="mt-5">Use our code <b>d4vss-3735</b> to get a 20% discount on your order!</Text>
+            </div>
+            <Text size="1" className="opacity-80 mt-6 mb-8">By getting a server over our link, you are supporting this project.</Text>
+          </div>
+
           <Footer />
         </Theme>
       </body>
