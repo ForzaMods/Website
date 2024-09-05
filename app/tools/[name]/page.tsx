@@ -2,9 +2,15 @@ import "@/styles/markdown.css";
 
 import type { Metadata } from "next";
 import Image from "next/image";
-import { MDXRemote } from "next-mdx-remote/rsc";
+// @ts-ignore
+import { Markup } from "react-render-markup";
+import hljs from "highlight.js";
+import markdownit from "markdown-it"
+import { CustomH1, CustomH2, CustomH3, CustomH4, CustomH5, CustomH6, CustomImg, CustomLi, CustomLink, CustomOl, CustomP, CustomUl } from '@/components/custom-components';
+
 import { Button } from "@radix-ui/themes";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 const tools = [
   {
@@ -58,7 +64,10 @@ export async function generateMetadata(
   { params }: { params: { name: string } },
 ): Promise<Metadata> {
   const tool = tools.find((tool) => tool.path === `/${params.name}`);
-
+  if (!tool) {
+    return notFound();
+  }
+  
   const MDD = {
     title: `${tool?.name} | Forza Mods - The Forza Modding Community`,
     description: null || "",
@@ -85,17 +94,49 @@ export async function generateMetadata(
   }
 }
 
+const replace = {
+  h1: CustomH1,
+  h2: CustomH2,
+  h3: CustomH3,
+  h4: CustomH4,
+  h5: CustomH5,
+  h6: CustomH6,
+  p: CustomP,
+  a: CustomLink,
+  img: CustomImg, 
+  ul: CustomUl,
+  ol: CustomOl,
+  li: CustomLi,
+};
+
 export default async function ToolView({ params }: { params: { name: string } }) {
   const tool = tools.find((tool) => tool.path === `/${params.name}`);
   if (!tool) {
-    return <h1>404 - Tool not found</h1>;
+    return notFound();
   }
 
   async function UrlMarkdown({ readmeUrl } : { readmeUrl: string }) {
     const res = await fetch(readmeUrl);
     const markdown = await res.text();
-    return <div className="markdown-body p-5 md:p-10 border border-[var(--accent-6)]">
-      <MDXRemote source={markdown} options={{}} />
+
+    const md = markdownit({
+      html: true,
+      linkify: true,
+      highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return hljs.highlight(str, { language: lang }).value;
+          } catch (__) {}
+        }
+    
+        return '';
+      }
+    })
+  
+    const result = md.render(markdown);
+
+    return <div className="md tool p-5 md:p-10 border border-accent-6">
+      <Markup markup={result} replace={replace} />
     </div>
   }
 

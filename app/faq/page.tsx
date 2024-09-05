@@ -72,7 +72,7 @@ const questions: { [category: string]: { question: string; answer: string }[] } 
           <Accordion.AccordionRoot key={category} type="single" collapsible className="max-w-3xl mx-auto">
             <Heading as="h3" size="4" className="mt-8">{category}</Heading>
             {questions[category].map((entry, index) => (
-              <Accordion.AccordionItem key={index} value={category + index} className="border-b border-[var(--accent-6)]">
+              <Accordion.AccordionItem key={index} value={category + index} className="border-b border-accent-6">
                 <Accordion.AccordionTrigger>
                   {entry.question}
                 </Accordion.AccordionTrigger>

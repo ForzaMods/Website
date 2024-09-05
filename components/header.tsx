@@ -8,7 +8,7 @@ export default async function Header() {
     session !== null && session.user !== null ? session.user : null;
   
   return (
-    <header className="px-8 py-4 w-full border-b border-[var(--accent-8)]">
+    <header className="px-8 py-4 w-full border-b border-accent-8">
       <DesktopNav user={parsedUser} />
       <MobileNav user={parsedUser} />
     </header>

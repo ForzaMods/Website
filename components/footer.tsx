@@ -10,12 +10,11 @@ const footer = {
     { href: "/tools/car-table", name: "Car Table" }
   ],
   miscellaneous: [
-    { href: "/mods", name: "Mod Browser" },
     { href: "/faq", name: "FAQ & Troubleshooting" },
+    { href: "/blog", name: "Blog" },
     { href: "/ideas", name: "Submit an idea" }
   ],
   external: [
-    { href: "https://status.forzamods.dev", name: "Status", target: "_blank" },
     { href: "https://github.com/ForzaMods", name: "GitHub", target: "_blank" },
     { href: "https://discord.gg/forzamods", name: "Discord Server", target: "_blank" },
     { href: "https://github.com/szaaamerik", name: "Support Us", target: "_blank" }
@@ -33,7 +32,7 @@ export default function Footer() {
     ));
 
   return (
-    <footer className="border-t border-[var(--accent-8)]">
+    <footer className="border-t border-accent-8">
       <div className="flex flex-col gap-10 md:grid grid-cols-3 mx-auto p-10 px-12 lg:px-20 ">
         <nav className="flex flex-col gap-1">
           <Heading as="h4" size="3" weight="bold" color="gray" className="footer-title">Tools</Heading>
@@ -54,7 +53,7 @@ export default function Footer() {
           </div>
         </nav>
       </div>
-      <div className="flex flex-row px-12 lg:px-20 py-6 border-t border-[var(--accent-8)] bg-[var(--accent-2)]">
+      <div className="flex flex-row px-12 lg:px-20 py-6 border-t border-accent-8 bg-accent-2">
         <aside className="flex gap-2">
           <Image src="/forzamods-square.webp" alt="Forza Mods Logo" width={48} height={48} />
           <div>
