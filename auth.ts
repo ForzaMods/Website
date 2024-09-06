@@ -9,5 +9,5 @@ const xata = new XataClient();
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: XataAdapter(xata),
   providers: [Discord],
-  trustHost: true,
+  redirectProxyUrl: "https://forzamods.dev/api/auth"
 })
