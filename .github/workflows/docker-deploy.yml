@@ -1,0 +1,42 @@
+name: Build and Deploy App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-project:
+    name: Build project
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create .env file
+        run: |
+          echo "AUTH_SECRET=${{ secrets.AUTH_SECRET }}" > .env
+          echo "XATA_BRANCH=${{ secrets.XATA_BRANCH }}" >> .env
+          echo "XATA_API_KEY=${{ secrets.XATA_API_KEY }}" >> .env
+          echo "AUTH_DISCORD_ID=${{ secrets.AUTH_DISCORD_ID }}" >> .env
+          echo "AUTH_DISCORD_SECRET=${{ secrets.AUTH_DISCORD_SECRET }}" >> .env
+          echo "CUSTOM_DISCORD_WEBHOOK_URL=${{ secrets.CUSTOM_DISCORD_WEBHOOK_URL }}" >> .env
+          echo "AUTH_TRUST_HOST=TRUE" >> .env
+
+      - name: Build Docker image
+        run: |
+          docker build -t forzamods-dev .
+
+      - name: Deploy Docker container
+        if: success()
+        run: |
+          docker stop forzamods-dev || true
+          docker rm forzamods-dev || true
+          docker run -d -p 3271:3000 \
+            --name forzamods-dev \
+            --env-file .env \
+            forzamods-dev
+
+      - name: Cleanup
+        run: |
+          rm .env
