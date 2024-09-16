@@ -35,6 +35,7 @@ jobs:
           docker run -d -p 3271:3000 \
             --name forzamods-dev \
             --env-file .env \
+            --restart unless-stopped \
             forzamods-dev
 
       - name: Cleanup
