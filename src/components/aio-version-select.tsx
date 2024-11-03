@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowDownToLineIcon, CheckIcon, ChevronsUpDownIcon } from "lucide-react";
+import { ArrowDownToLineIcon, ChevronsUpDownIcon } from "lucide-react";
 import { Select } from "./ui/select";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -9,7 +9,7 @@ import { css } from "styled-system/css";
 
 export default function AioVersionSelect() {
   const [items, setItems] = useState([{ label: null, value: null }]);
-  const [selectedTag, setSelectedTag] = useState(null);
+  const [selectedValue, setSelectedValue] = useState<any | undefined>();
 
   useEffect(() => {
     const fetchTags = async () => {
@@ -19,19 +19,27 @@ export default function AioVersionSelect() {
         const data = await response.json();
         const tagItems = data
           .filter((obj: any) => /^[0-9]/.test(obj.name))
-          .map((obj: any) => ({ label: obj.name, value: obj.name }));
-        setItems(tagItems.slice(0, 9));
+          .map((obj: any, index: number) => ({
+            label: obj.name + (index === 0 ? " - Latest" : ""),
+            value: obj.name
+          }));
+        const itemsToSet = tagItems.slice(0, 9);
+        setItems(itemsToSet);
+        if (itemsToSet.length > 0) {
+          setSelectedValue(itemsToSet[0].value);
+        }
       } catch (error) {
         console.error("Error fetching tags:", error);
       }
     };
-
+  
     fetchTags();
   }, []);
+  
 
   return (
     <>
-      <Select.Root positioning={{ sameWidth: true, flip: true, arrowPadding: 2 }} className={css({ width: { md: "2xs" }})} items={items} variant="outline">
+      <Select.Root positioning={{ sameWidth: true, flip: true, arrowPadding: 2 }} className={css({ width: { md: "2xs" }})} items={items} value={["2.4.0.1"]} onValueChange={(item: any) => setSelectedValue(item.value)} variant="outline">
         <Select.Control>
           <Select.Trigger>
             <Select.ValueText placeholder="Select a Version" />
@@ -41,14 +49,17 @@ export default function AioVersionSelect() {
         <Select.Positioner>
           <Select.Content>
             <Select.ItemGroup>
-              {items.map((item) => (
-                <Select.Item key={item.value} item={item} onClick={() => setSelectedTag(item.value)}>
-                  <Select.ItemText>{item.label}</Select.ItemText>
-                  <Select.ItemIndicator>
-                    <CheckIcon />
-                  </Select.ItemIndicator>
-                </Select.Item>
-              ))}
+            {selectedValue && items.map((item: any) => (
+              <Select.Item
+                key={item.value}
+                item={item}
+                className={selectedValue === item.value ? "selected-class" : ""}
+              >
+                <Select.ItemText>{item.label}</Select.ItemText>
+                {selectedValue === item.value && <Select.ItemIndicator>✓</Select.ItemIndicator>}
+              </Select.Item>
+            ))}
+
               <Select.Item key="View all" item="View all">
                 <Link href="https://github.com/ForzaMods/Forza-Mods-AIO/tags">
                   <Select.ItemText>View older versions</Select.ItemText>
@@ -58,11 +69,11 @@ export default function AioVersionSelect() {
           </Select.Content>
         </Select.Positioner>
       </Select.Root>
-      {selectedTag == null ? 
+      {selectedValue == null ? 
       <IconButton disabled aria-label="Download" variant="outline">
         <ArrowDownToLineIcon />
       </IconButton> : 
-      <Link href={`https://github.com/ForzaMods/Forza-Mods-AIO/releases/download/${selectedTag}/Forza-Mods-AIO.exe`}>
+      <Link href={`https://github.com/ForzaMods/Forza-Mods-AIO/releases/download/${selectedValue}/Forza-Mods-AIO.exe`}>
         <IconButton aria-label="Download" variant="outline">
           <ArrowDownToLineIcon />
         </IconButton>

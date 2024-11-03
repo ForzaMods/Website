@@ -5,9 +5,9 @@ import Header from "~/components/header";
 import { css } from "styled-system/css";
 import Footer from "~/components/footer";
 
-import { Raleway } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
-const raleway = Raleway({ subsets: ['latin'] })
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
@@ -66,13 +66,11 @@ export const metadata: Metadata = {
 const RootLayout = (props: PropsWithChildren) => {
   const { children } = props;
 
-
-
   return (
     <html lang="en">
       <body
         className={
-          `dark ${raleway.className} ` +
+          `dark ${jakarta.className} ` +
           css({
             display: "flex",
             flexDirection: "column",
