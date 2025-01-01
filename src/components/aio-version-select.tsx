@@ -28,7 +28,6 @@ export default function AioVersionSelect() {
         const itemsToSet = tagItems.slice(0, 9);
         setItems(itemsToSet);
         if (itemsToSet.length > 0) {
-          console.log(itemsToSet[0].value)
           setSelectedValue(itemsToSet[0].value);
         }
       } catch (error) {
