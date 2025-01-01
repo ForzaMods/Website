@@ -6,26 +6,29 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { IconButton } from "./ui/icon-button";
 import { css } from "styled-system/css";
+import { redirect } from "next/navigation";
 
 export default function AioVersionSelect() {
-  const [items, setItems] = useState([{ label: null, value: null }]);
+  const [items, setItems] = useState([{ label: null, value: null, url: null }]);
   const [selectedValue, setSelectedValue] = useState<any | undefined>();
 
   useEffect(() => {
     const fetchTags = async () => {
       try {
-        const url = "https://api.github.com/repos/ForzaMods/Forza-Mods-AIO/tags";
+        const url = "https://api.github.com/repos/ForzaMods/Forza-Mods-AIO/releases";
         const response = await fetch(url);
         const data = await response.json();
         const tagItems = data
           .filter((obj: any) => /^[0-9]/.test(obj.name))
           .map((obj: any, index: number) => ({
-            label: obj.name + (index === 0 ? " - Latest" : ""),
-            value: obj.name
+            label: obj.tag_name + (index === 0 ? " - Latest" : ""),
+            value: obj.tag_name,
+            url: obj.assets[0].browser_download_url,
           }));
         const itemsToSet = tagItems.slice(0, 9);
         setItems(itemsToSet);
         if (itemsToSet.length > 0) {
+          console.log(itemsToSet[0].value)
           setSelectedValue(itemsToSet[0].value);
         }
       } catch (error) {
@@ -39,10 +42,10 @@ export default function AioVersionSelect() {
 
   return (
     <>
-      <Select.Root positioning={{ sameWidth: true, flip: true, arrowPadding: 2 }} className={css({ width: { md: "2xs" }})} items={items} value={["2.4.0.1"]} onValueChange={(item: any) => setSelectedValue(item.value)} variant="outline">
+      <Select.Root positioning={{ sameWidth: true, flip: true, arrowPadding: 2 }} className={css({ width: { md: "2xs" }})} items={items} defaultValue={[selectedValue]} onValueChange={(item: any) => setSelectedValue(item.value)} variant="outline">
         <Select.Control>
           <Select.Trigger>
-            <Select.ValueText placeholder="Select a Version" />
+            <Select.ValueText placeholder={items.find((item) => item.value === selectedValue)?.label || ""} />
             <ChevronsUpDownIcon />
           </Select.Trigger>
         </Select.Control>
@@ -60,10 +63,8 @@ export default function AioVersionSelect() {
               </Select.Item>
             ))}
 
-              <Select.Item key="View all" item="View all">
-                <Link href="https://github.com/ForzaMods/Forza-Mods-AIO/tags">
-                  <Select.ItemText>View older versions</Select.ItemText>
-                </Link>
+              <Select.Item key="View all" item="View all" asChild>
+                <Select.ItemText onClick={() => redirect("https://github.com/ForzaMods/AIO/releases")}>View older versions</Select.ItemText>
               </Select.Item>
             </Select.ItemGroup>
           </Select.Content>
@@ -73,7 +74,7 @@ export default function AioVersionSelect() {
       <IconButton disabled aria-label="Download" variant="outline">
         <ArrowDownToLineIcon />
       </IconButton> : 
-      <Link href={`https://github.com/ForzaMods/Forza-Mods-AIO/releases/download/${selectedValue}/Forza-Mods-AIO.exe`}>
+      <Link href={items.find((item) => item.value == selectedValue)?.url || ""}>
         <IconButton aria-label="Download" variant="outline">
           <ArrowDownToLineIcon />
         </IconButton>
