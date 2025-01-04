@@ -1,4 +1,4 @@
-import { ArrowDownToLine } from "lucide-react";
+import { ArrowDownToLine, ClipboardList } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -9,6 +9,7 @@ import AioVersionSelect from "~/components/aio-version-select";
 import { Button } from "~/components/ui/button";
 import { Card } from "~/components/ui/card";
 import { Heading } from "~/components/ui/heading";
+import { IconButton } from "~/components/ui/icon-button";
 import { Text } from "~/components/ui/text";
 
 export const metadata: Metadata = {
@@ -103,15 +104,24 @@ export default function ModsAndTools() {
               }
             })} variant="outline">View on GitHub</Button>
             </Link>
-            <Link href={`https://github.com/ForzaMods/SaveTools/releases/latest/download/forza_saveswapper.exe`}>
+            <Link href={`https://gist.github.com/szaaamerik/3358f2feff9f613734170be1676c842f`}>
               <Button className={css({
               width: {
                 mdDown: "full",
               }
             })} aria-label="Download" variant="outline">
-                Download Latest
-                <ArrowDownToLine />
+                Read Guide
+                <ClipboardList />
               </Button>
+            </Link>
+            <Link href={`https://github.com/ForzaMods/SaveTools/releases/latest/download/forza_saveswapper.exe`}>
+              <IconButton className={css({
+              width: {
+                mdDown: "full",
+              }
+            })} aria-label="Download" variant="outline">
+                <ArrowDownToLine />
+              </IconButton>
             </Link>
           </Card.Footer>
         </Card.Root>

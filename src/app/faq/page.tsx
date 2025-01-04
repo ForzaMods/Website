@@ -141,7 +141,7 @@ export default function FrequentlyAskedQuestions() {
       {
         question: "Is there a guide/tool on how to saveswap?",
         answer:
-          "Yes, there is. You can find a saveswap tool on the <a style='text-decoration: underline' href='/mods-and-tools'>mods and tools</a> page. For FH4 you can use the AIO if you have the MS version or <a style='text-decoration: underline' target=_blank href='https://docs.google.com/document/d/1LdXcqBSg1suraLZeKn2tTNIMd1K3bjCIO69l-eYZgpQ/edit'>this guide</a>.",
+          "Yes, there is. You can find a saveswap tool on the <a style='text-decoration: underline' href='/mods-and-tools'>mods and tools</a> page and the guide for it <a style='text-decoration: underline' href='https://gist.github.com/szaaamerik/3358f2feff9f613734170be1676c842f'>here</a>. For FH4 you can use the AIO if you have the MS version or <a style='text-decoration: underline' target=_blank href='https://docs.google.com/document/d/1LdXcqBSg1suraLZeKn2tTNIMd1K3bjCIO69l-eYZgpQ/edit'>this guide</a>.",
       },
     ],
   };
