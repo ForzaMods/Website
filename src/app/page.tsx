@@ -39,21 +39,21 @@ export default function Home() {
         <div>
           <Text>Incredible</Text>
           <div className={css({ marginY: "5px" })}>
-            <NumberTicker from={0} to={1322784} durationInMs={2000} />
+            <NumberTicker from={0} to={1334227} durationInMs={2000} />
           </div>
           <Text>AIO downloads</Text>
         </div>
         <div>
           <Text>In excess of</Text>
           <div className={css({ marginY: "5px" })}>
-            <NumberTicker from={0} to={1020} durationInMs={2000} />
+            <NumberTicker from={0} to={1022} durationInMs={2000} />
           </div>
           <Text>GitHub stars</Text>
         </div>
         <div>
           <Text>More than</Text>
           <div className={css({ marginY: "5px" })}>
-            <NumberTicker from={0} to={93440} durationInMs={2000} />
+            <NumberTicker from={0} to={94070} durationInMs={2000} />
           </div>
           <Text>Discord members</Text>
         </div>

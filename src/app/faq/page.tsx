@@ -49,17 +49,12 @@ export default function FrequentlyAskedQuestions() {
         question: "Is anything paid?",
         answer: "No. We believe mods should be free.",
       },
-      {
-        question: "Can we add a feature?",
-        answer:
-          "If you wish to have a feature in some tool, you can submit your idea <a class='underline' href='/ideas'>here</a>.",
-      },
     ],
     AIO: [
       {
         question: "Game crashes upon opening the AIO",
         answer:
-          "If your game crashes upon opening the AIO, update the AIO to the latest version. It will always be <a style='text-decoration: underline' href='/tools/aio'>here</a>.",
+          "If your game crashes upon opening the AIO, update the AIO to the latest version. It will always be <a style='text-decoration: underline' href='/mods-and-tools'>here</a>.",
       },
       {
         question:
@@ -110,11 +105,6 @@ export default function FrequentlyAskedQuestions() {
           "AIO is open source and on GitHub with all of its files available for everyone to see and to make their versions of it. Please ignore all the sites that scan it and return it as viruses; those are false positives. And if the code were actually harmful, it would have been taken down by GitHub long ago!",
       },
       {
-        question: "I decided to give it a try, would versions matter?",
-        answer:
-          "Yes, it does. Please visit <a href='#3' style='text-decoration: underline'>issue NO3</a>.",
-      },
-      {
         question: "Will there be FH3 support in the future?",
         answer:
           "No, the game is at the end of its life and there's not much interest around it (it's also not worth doing it) plus you have dev build to play around with. (if you don't know what it is google it)",
@@ -149,9 +139,9 @@ export default function FrequentlyAskedQuestions() {
           "You should have never bought it in the first place (you got scammed). We don't sell anything. If you wish to support us, you can donate on the following links: <for davs> add here link to donos </for davs> or you can access them via AIO on the top right side. And no, we can't help you with that.",
       },
       {
-        question: "Is there a guide on how to saveswap?",
+        question: "Is there a guide/tool on how to saveswap?",
         answer:
-          "Yes, there is. You can find a saveswap guide for FH5 <a style='text-decoration: underline' target=_blank href='https://gist.github.com/szaaamerik/ec5a1aa522bed118b33bebbd5433d838'>here</a> and for FH4 you can use the AIO if you have the MS version or <a style='text-decoration: underline' target=_blank href='https://docs.google.com/document/d/1LdXcqBSg1suraLZeKn2tTNIMd1K3bjCIO69l-eYZgpQ/edit'>this guide</a>.",
+          "Yes, there is. You can find a saveswap tool on the <a style='text-decoration: underline' href='/mods-and-tools'>mods and tools</a> page. For FH4 you can use the AIO if you have the MS version or <a style='text-decoration: underline' target=_blank href='https://docs.google.com/document/d/1LdXcqBSg1suraLZeKn2tTNIMd1K3bjCIO69l-eYZgpQ/edit'>this guide</a>.",
       },
     ],
   };
@@ -202,7 +192,7 @@ export default function FrequentlyAskedQuestions() {
           <Accordion.Root collapsible multiple unmountOnExit>
             {questions[category].map((entry, index) => (
               <Accordion.Item key={index} value={category + index}>
-                <Accordion.ItemTrigger fontSize={15}>
+                <Accordion.ItemTrigger fontSize={15} className={css({ textDecoration: "underline", textDecorationThickness: 0.2 })}>
                   {entry.question}
                 </Accordion.ItemTrigger>
                 <Accordion.ItemContent
