@@ -7,6 +7,12 @@ import { Button } from "~/components/ui/button";
 import { Heading } from "~/components/ui/heading";
 import { Text } from "~/components/ui/text";
 
+const CONSTANTS = {
+  aioDownloads: 1423561,
+  githubStars: 1067,
+  discordMembers: 100000
+}
+
 export default function Home() {
   return (
     <>
@@ -39,21 +45,21 @@ export default function Home() {
         <div>
           <Text>Incredible</Text>
           <div className={css({ marginY: "5px" })}>
-            <NumberTicker from={0} to={1334227} durationInMs={2000} />
+            <NumberTicker from={0} to={CONSTANTS.aioDownloads} durationInMs={2000} />
           </div>
           <Text>AIO downloads</Text>
         </div>
         <div>
           <Text>In excess of</Text>
           <div className={css({ marginY: "5px" })}>
-            <NumberTicker from={0} to={1022} durationInMs={2000} />
+            <NumberTicker from={0} to={CONSTANTS.githubStars} durationInMs={2000} />
           </div>
           <Text>GitHub stars</Text>
         </div>
         <div>
           <Text>More than</Text>
           <div className={css({ marginY: "5px" })}>
-            <NumberTicker from={0} to={94070} durationInMs={2000} />
+            <NumberTicker from={0} to={CONSTANTS.discordMembers} durationInMs={2000} />
           </div>
           <Text>Discord members</Text>
         </div>
