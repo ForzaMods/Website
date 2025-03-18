@@ -68,6 +68,9 @@ const RootLayout = (props: PropsWithChildren) => {
 
   return (
     <html lang="en">
+      <head>
+        <meta name="monetag" content="0c10671630e7080d7df33d9ef02ab8fe">
+      </head>
       <body
         className={
           `dark ${jakarta.className} ` +
