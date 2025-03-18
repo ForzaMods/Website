@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export default function LatestReleaseButton() {
   const [selectedValue, setSelectedValue] = useState<string | undefined | null>(null);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
   
     useEffect(() => {
       const fetchLatestRelease = async () => {
@@ -25,8 +26,8 @@ export default function LatestReleaseButton() {
     }, []);
 
   return (
-    <Link href={selectedValue || "/"} passHref>
-      <Button variant="solid">
+    <Link href={isClicked ? (selectedValue || "") : ""} passHref>
+      <Button variant="solid" onClick={() => setIsClicked(true)}>
         Download Latest AIO 
         <ArrowDownToLineIcon />
       </Button>

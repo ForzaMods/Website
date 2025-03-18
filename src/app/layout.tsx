@@ -67,9 +67,9 @@ const RootLayout = (props: PropsWithChildren) => {
   const { children } = props;
 
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <head>
-        <meta name="monetag" content="0c10671630e7080d7df33d9ef02ab8fe">
+        <meta name="monetag" content="0c10671630e7080d7df33d9ef02ab8fe" />
       </head>
       <body
         className={
