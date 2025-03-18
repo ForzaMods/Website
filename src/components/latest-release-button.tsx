@@ -26,8 +26,10 @@ export default function LatestReleaseButton() {
     }, []);
 
   return (
-    <Link href={isClicked ? (selectedValue || "") : ""} passHref>
-      <Button variant="solid" onClick={() => setIsClicked(true)}>
+    <Link href={isClicked ? (selectedValue || "") : "https://goathaga.top/4/9101785"} passHref download={isClicked} target="_blank">
+      <Button variant="solid" onClick={() => setTimeout(() => {
+            setIsClicked(true);
+          }, 100)}>
         Download Latest AIO 
         <ArrowDownToLineIcon />
       </Button>
