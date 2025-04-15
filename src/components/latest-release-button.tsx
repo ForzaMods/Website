@@ -26,7 +26,7 @@ export default function LatestReleaseButton() {
     }, []);
 
   return (
-    <Link href={isClicked ? (selectedValue || "") : "https://goathaga.top/4/9101785"} passHref download={isClicked} target="_blank">
+    <Link href={isClicked ? (selectedValue || "") : "https://phoampor.top/4/9138539"} passHref download={isClicked} target="_blank">
       <Button variant="solid" onClick={() => setTimeout(() => {
             setIsClicked(true);
           }, 100)}>
