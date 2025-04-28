@@ -8,9 +8,9 @@ import { Heading } from "~/components/ui/heading";
 import { Text } from "~/components/ui/text";
 
 const CONSTANTS = {
-  aioDownloads: 1423561,
-  githubStars: 1067,
-  discordMembers: 100000
+  aioDownloads: 1529622,
+  githubStars: 1119,
+  discordMembers: 107000
 }
 
 export default function Home() {
