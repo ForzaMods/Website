@@ -26,10 +26,8 @@ export default function LatestReleaseButton() {
     }, []);
 
   return (
-    <Link href={isClicked ? (selectedValue || "") : "https://phoampor.top/4/9138539"} passHref download={isClicked} target="_blank">
-      <Button variant="solid" onClick={() => setTimeout(() => {
-            setIsClicked(true);
-          }, 100)}>
+    <Link href={selectedValue || "#"} passHref download={true} target="_blank">
+      <Button variant="solid">
         Download Latest AIO 
         <ArrowDownToLineIcon />
       </Button>
